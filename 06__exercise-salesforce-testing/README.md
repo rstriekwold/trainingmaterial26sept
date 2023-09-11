@@ -30,7 +30,7 @@ The purpose of this exercise is to learn how to create and run your first test a
 
 4. Create a folder in root named **resources**
 
-5. In this foler, create file common.robot and copy the contents from here [common.robot](src/branch/main/resources/common.robot)
+5. In this foler, create file common.robot and copy the contents from here [common.robot](../resources/common.robot)
 
 6. Open common.robot inside the folder
 
