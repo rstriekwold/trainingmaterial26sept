@@ -19,8 +19,6 @@ Allowlisted IP addresses ranges can access your Salesforce Trial Org. without re
 
 1. View IP Addresses here: [Whitelisting US & EU](https://docs.copado.com/articles/#!copado-robotic-testing-publication/getting-started-with-salesforce-testa-automation-1/a/h2_1803923317)
 
-2. For Australia CRT [Whitelisting AUS](https://docs.copado.com/articles/#!copado-ci-cd-publication/reserved-ip-addresses-for-allowlisting)
-
 # Configure allowlisting of IP Addresses in your Salesforce Trail Org.
 
 1. Login to your Salesforce Trial Org.
