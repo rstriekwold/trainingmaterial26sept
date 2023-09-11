@@ -23,7 +23,7 @@ The purpose of this exercise is to learn how to find libraries and keywords. Use
 
 2. Create a folder in the root named **exercise-2-consulting-libraries**
 
-3. In this folder, create file libraries.robot and copy the contents from here [libaries.robot](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/582f5c6ce20adf223d58b2f12f3b97073e7f93c0/exercise-2-consulting-libraries/libraries.robot)
+3. In this folder, create file libraries.robot and copy the contents from here [libaries.robot](raw/branch/main/02__exercise-consulting-libraries/libraries.robot)
 
 4. Use Big Live Test button and run step by step test case Exercise 2 - Consulting Libraries
 
