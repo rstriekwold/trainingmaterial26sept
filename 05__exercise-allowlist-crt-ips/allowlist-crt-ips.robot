@@ -1,7 +1,8 @@
 *** Settings ***
 Resource                   ../resources/common.robot
 Suite Setup                Setup Browser
-Suite Teardown             End suite
+Test Setup                 Login   ${login_url}   ${username}   ${password}
+Suite Teardown             Close All Browsers
 
 *** Test Cases ***
 Exercise 5 - Allowlist IPs at Setup Network Access
