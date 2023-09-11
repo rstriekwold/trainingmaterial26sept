@@ -56,7 +56,7 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Create a folder in the root named **exercise-7-using-variables**
 
-3. In this foler, create file variable-files.robot and copy the contents from here [variables-section.robot](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/exercise-7-using-variables/variables-section.robot)
+3. In this foler, create file variable-files.robot and copy the contents from here [variables-section.robot](variables-section.robot)
 
 4. Click **Live Test** button displayed just above the test case name **Variables Section** 
 
@@ -66,15 +66,15 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Open folder in the root named **exercise-7-using-variables**
 
-3. In this foler, create file variable-files.robot and copy the contents from here [variable-files.robot](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/exercise-7-using-variables/variable-files.robot)
+3. In this foler, create file variable-files.robot and copy the contents from here [variable-files.robot](variable-files.robot)
 
-4. In this foler, create file PythonVariables.py and copy the contents from here [PythonVariables.py](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/exercise-7-using-variables/PythonVariables.py)
+4. In this foler, create file PythonVariables.py and copy the contents from here [PythonVariables.py](PythonVariables.py)
 
-5. In this foler, create file YamlVariables.yaml and copy the contents from here [YamlVariables.yaml](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/exercise-7-using-variables/YamlVariables.yaml)
+5. In this foler, create file YamlVariables.yaml and copy the contents from here [YamlVariables.yaml](YamlVariables.yaml)
 
-6. In this foler, create file DynamicVariables.py and copy the contents from here [DynamicVariables.py](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/exercise-7-using-variables/DynamicVariables.py)
+6. In this foler, create file DynamicVariables.py and copy the contents from here [DynamicVariables.py](DynamicVariables.py)
 
-7. Specific to YAML, In the **root** folder, create file requirements.txt and copy the contents from here [requirements.txt](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/1573e4efbfb394d865ef6dd64b1f3d6836563ca1/requirements.txt)
+7. Specific to YAML, In the **root** folder, create file requirements.txt and copy the contents from here [requirements.txt](../requirements.txt)
 
 8. Open variable-files.robot and Click Live Test button displayed just above the test cases to see them in action!
 
@@ -84,6 +84,6 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Open folder in the root named **exercise-7-using-variables**
 
-3. In this foler, create file set-variables-keywords.robot and copy the contents from here [set-variables-keywords.robot](https://bitbucket.org/copado-robotic-testing/training-exercises/raw/6b626388ef38d2553fd15d7392d3357d63a78073/exercise-7-using-variables/set-variables-keywords.robot)
+3. In this foler, create file set-variables-keywords.robot and copy the contents from here [set-variables-keywords.robot](set-variables-keywords.robot)
 
 4. Click **Live Test** button displayed just above the test case names and learn about **scope of variables** using different keywords.
