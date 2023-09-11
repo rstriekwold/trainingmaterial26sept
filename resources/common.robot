@@ -55,3 +55,8 @@ Home
     Run Keyword If              ${login_status}             Login
     ClickText                   Home
     VerifyTitle                 Home | Salesforce
+
+Sales
+    [Documentation]             Navigate to homepage, login if needed
+    LaunchApp                   Sales
+    VerifyText                  Sales
