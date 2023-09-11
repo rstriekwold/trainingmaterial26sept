@@ -20,13 +20,13 @@ Setup Browser
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
 
 
-Close All Browsers
+Close All Browser Sessions
     Close All Browsers
 
 
 Login
     [Documentation]             Login to Salesforce instance
-    [Arguments]                 ${login_url}                ${username}                 ${password}
+    [Arguments]                 url=${login_url}    username=${username}    password=${password}
     GoTo                        ${login_url}
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
@@ -64,7 +64,7 @@ Home
     [Documentation]             Navigate to homepage, login if needed
     GoTo                        ${home_url}
     ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                  2
-    Run Keyword If              ${login_status}             Log                         You need to login first    level=ERROR                    
+    Run Keyword If              ${login_status}             Login                   
     ClickText                   Home
     VerifyTitle                 Home | Salesforce
 
