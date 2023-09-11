@@ -1,7 +1,6 @@
 *** Settings ***
 Resource                      ../resources/common.robot
 Suite Setup                   Setup Browser
-Test Setup                    Login   ${login_url}   ${username}   ${password}
 Suite Teardown                End suite
 
 
