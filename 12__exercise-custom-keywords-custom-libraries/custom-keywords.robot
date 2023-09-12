@@ -31,28 +31,25 @@ Exercise 12 - End to End test using Custom Keywords after Step 1
     Step 1 - Delete Lead
 
 Exercise 12 - End to End test using Custom Keywords after Step 2
-    
+    # At this point the test data in the custom keywords are variables
     Appstate                    Home
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
     ClickText                   New                         anchor=Import
     VerifyText                  Lead Information
-    
-    # At this point the test data in the custom keywords are variables
-
     Step 2 - Create Lead Second Step     lead_status=Working  last_name=Smith    company=Growmore      salutation=Ms.    first_name=Tina    phone=+12234567858449    title=Manager    email=tina.smith@gmail.com    website=https://www.growmore.com/    lead_source=Advertisement
     
     LaunchApp                   Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
-
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     Step 2 - Verify Lead                 last_name=Smith      salutation=Ms.    first_name=Tina     company=Growmore    phone=+12234567858449    title=Manager       website=https://www.growmore.com/ 
     
     LaunchApp                   Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
-
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     Step 2 - Delete Lead
 
 *** Keywords ***
