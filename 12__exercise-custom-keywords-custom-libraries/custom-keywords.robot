@@ -38,7 +38,6 @@ Exercise 12 - End to End test using Custom Keywords after Step 2
     VerifyText                  Recently Viewed             timeout=120s
     ClickText                   New                         anchor=Import
     VerifyText                  Lead Information
-    ClickElement
     
     # At this point the test data in the custom keywords are variables
 
@@ -101,7 +100,7 @@ Step 1 - Delete Lead
 Step 2 - Create Lead Second Step 
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
     UseModal                    On                          # Only find fields from open modal dialog
-    Run Keyword If              '${salutation}'!='${EMPTY}''                            Picklist               Salutation             Ms.                         #optional
+    Run Keyword If              '${salutation}'!='${EMPTY}'                            Picklist               Salutation             Ms.                         #optional
     Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  Tina                      #optional
     TypeText                    Last Name                   ${last_name}                #mandatory
     Picklist                    Lead Status                 ${lead_status}              #mandatory
