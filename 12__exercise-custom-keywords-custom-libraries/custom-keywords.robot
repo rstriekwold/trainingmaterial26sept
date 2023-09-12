@@ -1,19 +1,17 @@
 *** Settings ***
 Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
-Test Setup                      Home
-Test Teardown                   Home
 Suite Teardown                  Close All Browser Sessions
 
 *** Test Cases ***
-Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings
-    ClickText                   Leads
-
-Exercise 10 - Overridden Test Teardown and Suite Teardown
+Exercise 12 - Calling Custom Keywords
     [Setup]                     Create Lead
     Appstate                    Home
     Launch App                  Sales
     ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
     Create Lead
 
     VerifyText                  Tina Smith
@@ -28,13 +26,6 @@ Exercise 10 - Overridden Test Teardown doing nothing
 *** Keywords ***
 
 Create Lead
-    Launch App                  Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
-    ClickText                   New                         anchor=Import
-    VerifyText                  Lead Information
-
     UseModal                    On                          # Only find fields from open modal dialog
     Picklist                    Salutation                  Ms.
     TypeText                    First Name                  Tina
