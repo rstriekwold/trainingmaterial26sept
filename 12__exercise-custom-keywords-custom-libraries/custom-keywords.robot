@@ -3,13 +3,6 @@ Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
 Suite Teardown                  Close All Browser Sessions
 
-*** Variables ***
-${browser}                      chrome
-${username}                     ea9mlm8la81a5l-pmcd@force.com
-${login_url}                    https://energy-force-4969.my.salesforce.com                    # Salesforce instance. NOTE: Should be overwritten in CRT variables
-${home_url}                     ${login_url}/lightning/page/home
-${password}		      TrailSF01!
-
 *** Test Cases ***
 Exercise 12 - End to End test using Custom Keywords after Step 1
     Appstate                    Home
