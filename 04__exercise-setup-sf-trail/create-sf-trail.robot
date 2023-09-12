@@ -55,19 +55,44 @@ Exercise 4 - Create Salesforce Trial Org
 
 Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Switch Window              1
-    ${email_count}=            Get Text Count             Welcome to Salesforce
-    Log to Console           ${email_count}   
-    IF                 '${email_count}' > '${0}'
-        Log to Console       I've found an existing mail, let's wait 180 sec for the new mail to arrive.
-        Sleep          180
+    ${email_count}=            Get Text Count              Welcome to Salesforce
+    Log to Console             ${email_count}
+    IF                         '${email_count}' > '${0}'
+        Log to Console         I've found an existing mail, let's wait 180 sec for the new mail to arrive.
+        Sleep                  180
     ELSE
-         ClickItemUntil             Welcome to Salesforce       GO                          timeout=180
-    END   
+        ClickItemUntil         Welcome to Salesforce       GO                          timeout=180
+    END
     ClickText                  Welcome to Salesforce
     ScrollText                 Again, welcome to Salesforce
     ${sftrial_url}=            GetText                     login-href                  tag=a
     ${sftrial_username}=       GetText                     span-user-name              tag=span
     ClickText                  Verify Account
+    Switch Window              3
+
+    # Sometimes verify your identify screen appears first where you need to enter an emailed verification code
+    ${code_needed}=            IsText                      Verify Your Identity
+
+    IF                         '${code_needed}' = 'True'
+        ${email_count}=            Get Text Count              Verify Your Identity
+        Log to Console             ${email_count}
+    END
+
+    IF                        '${email_count}' > '${0}'
+        Log to Console         I've found an existing mail, let's wait 180 sec for the new mail to arrive.
+            Sleep                  180
+    ELSE IF
+            ClickItemUntil         Verify Your Identity       GO                          timeout=180
+    END                    GO                         timeout=180
+        
+        ${sftrial_username}=       GetText                     span-user-name              tag=span
+        Type Text              Verification Code           ${code}
+
+
+
+    ${code_needed}=            IsText                      Verify Your Identity
+ 
+
     Switch Window              3
     Set Suite Variable         ${password}                 TrialSF01!
     TypeText                   New Password                ${password}
@@ -76,11 +101,11 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     ClickText                  Change Password
     Log Many                   ${email_address}            ${sftrial_url}              ${sftrial_username}        ${password}
     ClickText                  Close this window
-    Set Global Variable        ${login_url}                   ${sftrial_url}
-    Set Global Variable        ${home_url}                    ${login_url}/lightning/page/home
-    Set Global Variable        ${username}                    ${sftrial_username}
-    Set Global Variable        ${password}                    ${password}
-    Log To Console             ${login_url} 
+    Set Global Variable        ${login_url}                ${sftrial_url}
+    Set Global Variable        ${home_url}                 ${login_url}/lightning/page/home
+    Set Global Variable        ${username}                 ${sftrial_username}
+    Set Global Variable        ${password}                 ${password}
+    Log To Console             ${login_url}
     Log To Console             ${home_url}
     Log To Console             ${username}
     Log To Console             ${password}
