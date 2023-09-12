@@ -72,9 +72,10 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
 
     # Sometimes verify your identify screen appears first where you need to enter an emailed verification code
     ${code_needed}=            IsText                      Verify Your Identity
-
-    Switch Window              1
-    IF                         '${code_needed}' = 'True'
+    Log to Console    ${code_needed}         
+    
+    IF                         '${code_needed}' == 'True'
+        Switch Window              1
         ${email_count}=            Get Text Count              Verify Your Identity
         Log to Console             ${email_count}
         
