@@ -73,25 +73,24 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     # Sometimes verify your identify screen appears first where you need to enter an emailed verification code
     ${code_needed}=            IsText                      Verify Your Identity
 
+    Switch Window              1
     IF                         '${code_needed}' = 'True'
         ${email_count}=            Get Text Count              Verify Your Identity
         Log to Console             ${email_count}
-    
-
-        IF                        '${email_count}' > '${0}'
-            Log to Console         I've found an existing mail, let's wait 180 sec for the new mail to arrive.
+        
+        IF                       '${email_count}' > '${0}'
+            Log to Console         I've found an existing mail, let's wait 180 sec for the new mail to arrive
             Sleep                  180
         ELSE
             ClickItemUntil         Verify Your Identity       GO                          timeout=180
-        END                    GO                         timeout=180
+        END
         
-        ${sftrial_username}=       GetText                     span-user-name              tag=span
+        ${email_body}=       Get Text                     gmail_quote                        tag=div
+        ${code} =	Get Regexp Matches	${email_body}	Verification Code: (......)	1
+        Switch Window              3
         Type Text              Verification Code           ${code}
+        Click Text             Verify                      anchor=again
     END
-
-
-    ${code_needed}=            IsText                      Verify Your Identity
- 
 
     Switch Window              3
     Set Suite Variable         ${password}                 TrialSF01!
