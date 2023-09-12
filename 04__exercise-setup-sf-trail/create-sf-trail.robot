@@ -73,9 +73,9 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
 
     # Sometimes verify your identify screen appears first where you need to enter an emailed verification code
     ${code_needed}=            IsText                      Verify Your Identity
-    Log to Console    ${code_needed}         
-    
+          
     IF                         '${code_needed}' == 'True'
+        Log to Console        Verify Identify Screen appeared, get email verification code and enter it
         Switch Window              1
         ${email_count}=            Get Text Count              Verify Your Identity
         Log to Console             ${email_count}
@@ -93,6 +93,8 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
         Type Text              Verification Code           ${code}
         Log Screenshot
         Click Text             Verify                      anchor=again
+    ELSE
+        Log to Console        Verify Identify Screen did not appear, continue set password
     END
 
     Switch Window              3
