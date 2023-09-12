@@ -6,7 +6,7 @@ Library                        DateTime
 Library                        String
 Library                        BuiltIn
 Suite Setup                    Open Browser                about:blank                 chrome
-Suite Teardown                 Close All Browser Sessions
+Suite Teardown                 Close All Browsers
 
 
 *** Variables ***
