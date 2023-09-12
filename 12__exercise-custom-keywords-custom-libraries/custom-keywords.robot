@@ -4,16 +4,18 @@ Suite Setup                     Setup Browser
 Suite Teardown                  Close All Browser Sessions
 
 *** Test Cases ***
-Exercise 12 - End to End test using Customer Keywords after Step 1
+Exercise 12 - End to End test using Custom Keywords after Step 1
     Appstate                    Home
-    Step 1 - Create Lead First Step
+    # At this point the test data in the custom keywords are fixed.
+    Step 1 - Create Lead First Step    
     Step 1 - Verify Lead
     Step 1 - Delete Lead
 
-Exercise 12 - End to End test using Customer Keywords after Step 2
+Exercise 12 - End to End test using Custom Keywords after Step 2
+    # At this point the test data in the custom keywords are variables
     Appstate                    Home
-    Step 2 - Create Lead First Step
-    Step 2 - Verify Lead
+    Step 2 - Create Lead Second Step     lead_status=Working  last_name=Smith    company=Growmore      salutation=Ms.    first_name=Tina    phone=+12234567858449    title=Manager    email=tina.smith@gmail.com    website=https://www.growmore.com/    lead_source=Advertisement
+    Step 2 - Verify Lead                 last_name=Smith      salutation=Ms.    first_name=Tina     company=Growmore    phone=+12234567858449    title=Manager       website=https://www.growmore.com/ 
     Step 2 - Delete Lead
 
 *** Keywords ***
@@ -35,7 +37,7 @@ Step 1 - Create Lead First Step
     TypeText                    Last Name                   Smith                       #mandatory
     Picklist                    Lead Status                 Working                     #mandatory
     TypeText                    Phone                       +12234567858449             First Name             #optional
-    TypeText                    Company                     Growmore                    Last Name              #mandatory
+    TypeText                    Company                     Growmore                    Industry              #mandatory
     TypeText                    Title                       Manager                     Address Information    #optional
     TypeText                    Email                       tina.smith@gmail.com        Rating                 #optional
     TypeText                    Website                     https://www.growmore.com/                          #optional
@@ -74,7 +76,7 @@ Step 1 - Delete Lead
     # Step 2 - Update Custom Keywords with arguments, making them generic for different test data, re-usable keywords
     ##############################################################################################################################
 
-Step 2 - Create Lead First Step 
+Step 2 - Create Lead Second Step 
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
     UseModal                    On                          # Only find fields from open modal dialog
     Run Keyword If              "${salutation}"!="${EMPTY}"                             Salutation             Ms.                         #optional
@@ -92,13 +94,14 @@ Step 2 - Create Lead First Step
     Sleep                       2
 
 Step 2 - Verify Lead
-    [Arguments]
+    [Arguments]                 ${lead_status}=${EMPTY}              ${last_name}=${EMPTY}                ${company}=${EMPTY}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
     ClickText                   Details                     anchor=Activity
-    VerifyText                  Ms. Tina Smith              anchor=Details
-    VerifyText                  Manager                     anchor=Details
-    VerifyText                  +12234567858449             anchor=Lead Status
-    VerifyField                 Company                     Growmore
-    VerifyField                 Website                     https://www.growmore.com/
+    ${full_name}=               Catenate                    ${salutation}                        ${first_name}                        ${last_name}
+    VerifyText                  ${full_name}              anchor=Details
+    VerifyText                  ${title}                     anchor=Details
+    VerifyText                  ${phone}             anchor=Lead Status
+    VerifyField                 Company                     ${company}
+    VerifyField                 Website                     ${website}
     Log Screenshot
 
 Step 2 - Delete Lead
