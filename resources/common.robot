@@ -26,7 +26,6 @@ Close All Browser Sessions
 
 Login
     [Documentation]             Login to Salesforce instance
-    [Arguments]                 url=${login_url}    username=${username}    password=${password}
     GoTo                        ${login_url}
     TypeText                    Username                    ${username}                 delay=1
     TypeText                    Password                    ${password}
