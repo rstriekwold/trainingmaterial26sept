@@ -69,6 +69,7 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     ${sftrial_username}=       GetText                     span-user-name              tag=span
     ClickText                  Verify Account
     Switch Window              3
+    Log Screenshot
 
     # Sometimes verify your identify screen appears first where you need to enter an emailed verification code
     ${code_needed}=            IsText                      Verify Your Identity
@@ -85,11 +86,12 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
         ELSE
             ClickItemUntil         Verify Your Identity       GO                          timeout=180
         END
-        
+        Log Screenshot
         ${email_body}=       Get Text                     gmail_quote                        tag=div
         ${code} =	Get Regexp Matches	${email_body}	Verification Code: (......)	1
         Switch Window              3
         Type Text              Verification Code           ${code}
+        Log Screenshot
         Click Text             Verify                      anchor=again
     END
 
