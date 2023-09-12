@@ -46,7 +46,7 @@ The purpose of this exercise is to learn how to run (groups of) tests with Copad
 
 ## Regression Mode
 
-1. Open **exercise 9 test execution parameters**
+1. Select suite **exercise 9 test execution parameters**
 
 2. Select Regression Mode
 
