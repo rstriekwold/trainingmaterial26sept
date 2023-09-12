@@ -42,10 +42,10 @@ Welcome to our Bitbucket repo. Here you can find and read all the exercises used
 5.  [External Test Data](24__examples/external-test-data)
 6.  [String Manipulation](24__examples/string-manipulation)
 7.  [Date & Time](24__examples/date-time)
-7.  [Visual Testing with QVision](24__examples/visual-testing)
-8.  [Image Comparions with QImage](24__examples/image-comparison)
-9.  [PDF Testing](24__examples/pdf)
-10. [Operating System](24__examples/operating-system)
+8.  [Visual Testing with QVision](24__examples/visual-testing)
+9.  [Image Comparions with QImage](24__examples/image-comparison)
+10.  [PDF Testing](24__examples/pdf)
+11. [Operating System](24__examples/operating-system)
 
 ## Technologies
 
