@@ -22,8 +22,9 @@ Exercise 7 - Variable Files Access Yaml Variables
     Log        ${yaml_dict}[key_1]
 
 Exercise 7 - Variable Files Access Dynamic Variables
-    # Log   ${RANDOM_INT}
-    # Log   ${CURRENT_TIME}
+    Log   ${USER}
+    Log   ${RANDOM_INT}
+    Log   ${CURRENT_TIME}
     Log   ${AFTERNOON}
     Log   ${AREA1}
     Log   ${AREA2}
