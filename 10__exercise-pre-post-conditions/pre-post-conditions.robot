@@ -2,7 +2,7 @@
 Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
 Test Setup                      Home
-Test Teardown                   Close Browser
+Test Teardown                   Home
 Suite Teardown                  Close All Browser Sessions
 
 *** Test Cases ***
