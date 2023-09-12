@@ -9,7 +9,7 @@ Suite Teardown                  Close All Browser Sessions
 Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings
     ClickText                   Leads
 
-Exercise 10 - Using Suite Setup, Overridden Test Setup, Overridden Test Teardown and Suite Teardown in this order
+Exercise 10 - Overridden Test Teardown and Suite Teardown
     [Setup]                     Create Lead
     Appstate                    Home
     LaunchApp                   Sales
@@ -19,6 +19,9 @@ Exercise 10 - Using Suite Setup, Overridden Test Setup, Overridden Test Teardown
     VerifyText                  Growmore
     [Teardown]                  Delete Lead
 
+Exercise 10 - Overridden Test Teardown doing nothing
+    ClickText                   Leads
+    [Teardown]                  NONE
 
 *** Keywords ***
 
