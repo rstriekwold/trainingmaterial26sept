@@ -6,16 +6,54 @@ Suite Teardown                  Close All Browser Sessions
 *** Test Cases ***
 Exercise 12 - End to End test using Custom Keywords after Step 1
     Appstate                    Home
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
+    
     # At this point the test data in the custom keywords are fixed.
-    Step 1 - Create Lead First Step    
+    
+    Step 1 - Create Lead First Step   
+
+    LaunchApp                   Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
+
     Step 1 - Verify Lead
+
+    LaunchApp                   Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+
     Step 1 - Delete Lead
 
 Exercise 12 - End to End test using Custom Keywords after Step 2
-    # At this point the test data in the custom keywords are variables
+    
     Appstate                    Home
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
+    ClickElement
+    
+    # At this point the test data in the custom keywords are variables
+
     Step 2 - Create Lead Second Step     lead_status=Working  last_name=Smith    company=Growmore      salutation=Ms.    first_name=Tina    phone=+12234567858449    title=Manager    email=tina.smith@gmail.com    website=https://www.growmore.com/    lead_source=Advertisement
+    
+    LaunchApp                   Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+
     Step 2 - Verify Lead                 last_name=Smith      salutation=Ms.    first_name=Tina     company=Growmore    phone=+12234567858449    title=Manager       website=https://www.growmore.com/ 
+    
+    LaunchApp                   Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+
     Step 2 - Delete Lead
 
 *** Keywords ***
@@ -24,13 +62,7 @@ Exercise 12 - End to End test using Custom Keywords after Step 2
     # Step 1 - Group keywords in Custom Keywords
     ##############################################################################################################################
 
-Step 1 - Create Lead First Step
-    Launch App                  Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import
-    VerifyText                  Lead Information
-
+Step 1 - Create Lead First Step 
     UseModal                    On                          # Only find fields from open modal dialog
     Picklist                    Salutation                  Ms.                         #optional
     TypeText                    First Name                  Tina                        #optional
@@ -47,12 +79,6 @@ Step 1 - Create Lead First Step
     Sleep                       2
 
 Step 1 - Verify Lead
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
-    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
-
     ClickText                   Details                     anchor=Activity
     VerifyText                  Ms. Tina Smith              anchor=Details
     VerifyText                  Manager                     anchor=Details
@@ -62,10 +88,6 @@ Step 1 - Verify Lead
     Log Screenshot
 
 Step 1 - Delete Lead
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     ClickText                   Delete
     ClickText                   Delete
@@ -106,10 +128,6 @@ Step 2 - Verify Lead
 
 Step 2 - Delete Lead
     [Arguments]
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     ClickText                   Delete
     ClickText                   Delete
