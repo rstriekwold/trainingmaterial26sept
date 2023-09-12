@@ -74,9 +74,11 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 6. In this foler, create file DynamicVariables.py and copy the contents from here [DynamicVariables.py](DynamicVariables.py)
 
-7. Specific to YAML, In the **root** folder, create file requirements.txt and copy the contents from here [requirements.txt](../requirements.txt)
+7. In this foler, create file EnvVariables.py and copy the contents from here [EnvVariables.py](EnvVariables.py)
 
-8. Open variable-files.robot and Click Live Test button displayed just above the test cases to see them in action!
+8. Specific to YAML, In the **root** folder, create file requirements.txt and copy the contents from here [requirements.txt](../requirements.txt)
+
+9. Open variable-files.robot and Click Live Test button displayed just above the test cases to see them in action!
 
 # Set variables using keywords
 
