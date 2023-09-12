@@ -79,3 +79,9 @@ Using [Setup] and [Teardown] without a value or NONE value skips the Test Teardo
 5. Execute Test Case **Exercise 10 - Overridden Test Teardown doing nothing**
 
 6. View the report and verify if the Test Teardown keyword was executed not doing anything but overriding the Test Teardown from Settings table.
+
+# Links
+
+[Suite Setup and Suite Teardown](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#suite-setup-and-teardown)
+[Test Setup and Test Teardown](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-setup-and-teardown)
+[Suite Initialization File](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#suite-initialization-files)
