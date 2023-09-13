@@ -50,7 +50,7 @@ Test Teardown is executed at the start of each test case, at the end of the test
 
 1. Select suite **exercise 10 pre and post conditions**
 
-2. Open folder **exercise-10-pre-post-conditions**
+2. Open folder **10__exercise-pre-post-conditions**
 
 3. Execute Test Case **Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings**
 
