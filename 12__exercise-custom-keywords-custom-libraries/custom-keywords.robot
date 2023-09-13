@@ -10,16 +10,16 @@ Exercise 12 - Custom Keywords - Step 1 Grouping
     # In this exercise we use the same salesforce scenario built with exercise 6.
     # At this point the test data in the custom keywords are fixed.
 
-    Create Lead - Step 1 Grouping
-    Verify Lead - Step 1 Grouping
-    Delete Lead - Step 1 Grouping
+    Create Lead Step 1 Grouping
+    Verify Lead Step 1 Grouping
+    Delete Lead Step 1 Grouping
 
 Exercise 12 - Custom Keywords - Step 2 Replace values with arguments
     # At this point the test data in the custom keywords are variables
     Appstate                    Home
-    Create Lead - Step 2 Replace values with arguments      lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
-    Verify Lead - Step 2 Replace values with arguments      last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
-    Delete Lead - Step 2 Replace values with arguments      last_name=Smith             first_name=Tina
+    Create Lead Step 2 Replace values with arguments      lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
+    Verify Lead Step 2 Replace values with arguments      last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
+    Delete Lead Step 2 Replace values with arguments      last_name=Smith             first_name=Tina
 
 *** Keywords ***
 
@@ -27,7 +27,7 @@ Exercise 12 - Custom Keywords - Step 2 Replace values with arguments
     # Step 1 - Group keywords in Custom Keywords
     ##############################################################################################################################
 
-Create Lead - Step 1 Grouping
+Create Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
@@ -48,7 +48,7 @@ Create Lead - Step 1 Grouping
     UseModal                    Off
     Sleep                       2
 
-Verify Lead - Step 1 Grouping
+Verify Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
@@ -62,7 +62,7 @@ Verify Lead - Step 1 Grouping
     VerifyField                 Website                     https://www.growmore.com/
     Log Screenshot
 
-Delete Lead - Step 1 Grouping
+Delete Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
@@ -78,7 +78,7 @@ Delete Lead - Step 1 Grouping
     # Step 2 - Update Custom Keywords with arguments, making them generic for different test data, re-usable keywords
     ##############################################################################################################################
 
-Create Lead - Step 2 Replace values with arguments 
+Create Lead Step 2 Replace values with arguments 
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Launch App                  Sales
     ClickText                   Leads
@@ -100,7 +100,7 @@ Create Lead - Step 2 Replace values with arguments
     UseModal                    Off
     Sleep                       2
 
-Verify Lead - Step 2 Replace values with arguments
+Verify Lead Step 2 Replace values with arguments
     [Arguments]                 ${lead_status}=${EMPTY}     ${last_name}=${EMPTY}       ${company}=${EMPTY}    ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Launch App                  Sales
     ClickText                   Leads
@@ -117,7 +117,7 @@ Verify Lead - Step 2 Replace values with arguments
     VerifyField                 Website                     ${website}
     Log Screenshot
 
-Delete Lead - Step 2 Replace values with arguments
+Delete Lead Step 2 Replace values with arguments
     [Arguments]                 ${first_name}               ${last_name}
     Launch App                  Sales
     ClickText                   Leads
