@@ -24,7 +24,7 @@ The purpose of this exercise is to learn how to create and run your first test a
 
 1. Create a new empty suite **exercise 6 salesforce testing**
 
-2. Create a folder in the root named **exercise-6-salesforce-testing**
+2. Create a folder in the root named **06__exercise-salesforce-testing**
 
 3. In this foler, create file salesforce.robot and copy the contents from here [salesforce.robot](salesforce.robot)
 
