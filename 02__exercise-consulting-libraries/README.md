@@ -21,7 +21,7 @@ The purpose of this exercise is to learn how to find libraries and keywords. Use
 
 1. Create a new empty suite **exercise 2 consulting libraries**
 
-2. Create a folder in the root named **exercise-2-consulting-libraries**
+2. Create a folder in the root named **02__exercise-consulting-libraries**
 
 3. In this folder, create file libraries.robot and copy the contents from here [libaries.robot](libraries.robot)
 
