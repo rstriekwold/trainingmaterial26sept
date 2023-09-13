@@ -23,9 +23,9 @@ Exercise 12 - Custom Keywords - Step 2 Replace values with arguments
 
 *** Keywords ***
 
-    ##############################################################################################################################
-    # Step 1 - Group keywords in Custom Keywords
-    ##############################################################################################################################
+##############################################################################################################################
+# Step 1 - Group keywords in Custom Keywords
+##############################################################################################################################
 
 Create Lead Step 1 Grouping
     Launch App                  Sales
@@ -74,9 +74,9 @@ Delete Lead Step 1 Grouping
     ClickText                   Close
     Log Screenshot
 
-    ##############################################################################################################################
-    # Step 2 - Update Custom Keywords with arguments, making them generic for different test data, re-usable keywords
-    ##############################################################################################################################
+##############################################################################################################################
+# Step 2 - Update Custom Keywords with arguments, making them generic for different test data, re-usable keywords
+##############################################################################################################################
 
 Create Lead Step 2 Replace values with arguments 
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
