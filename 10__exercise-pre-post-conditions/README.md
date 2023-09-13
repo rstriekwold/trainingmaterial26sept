@@ -68,7 +68,7 @@ Using [Setup] and [Teardown] without a value or NONE value skips the Test Teardo
 
 1. Select suite **exercise 10 pre and post conditions**
 
-2. Open folder **exercise-10-pre-post-conditions**
+2. Open folder **10__exercise-pre-post-conditions**
 
 3. Execute Test Case **Exercise 10 - Overridden Test Teardown and Suite Teardown**
 
