@@ -35,6 +35,8 @@ The purpose of this exercise is to learn how to find libraries and keywords. Use
 
 # Links
 
+## CRT Libraries
+
 [All QWords Overview](https://docs.copado.com/articles/#!copado-robotic-testing-publication/all-qwords)
 
 [QWeb](https://docs.copado.com/resources/Storage/copado-robotic-testing-publication/CRT%20Site/qwords-reference/current/qwords/_attachments/QWeb.html)
@@ -49,4 +51,22 @@ The purpose of this exercise is to learn how to find libraries and keywords. Use
 
 [QNow](https://docs.copado.com/resources/Storage/copado-robotic-testing-publication/CRT%20Site/qwords-reference/current/qwords/_attachments/QNow.html)
 
-[3rd Party Libraries](https://robotframework.org/?tab=builtin#resources)
+## Robot Framework Libraries
+
+[Robot Framework Libraries](https://robotframework.org/?tab=builtin#resources)
+
+[BuiltIn](https://robotframework.org/robotframework/latest/libraries/BuiltIn.html
+
+[Collections](https://robotframework.org/robotframework/latest/libraries/Collections.html
+
+[String](https://robotframework.org/robotframework/latest/libraries/String.html
+
+[DateTime](http://robotframework.org/robotframework/latest/libraries/DateTime.html
+
+[OperatingSystem](https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html
+
+## 3rd Party Libraries
+
+[RequestsLibrary](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html
+
+[FakerLibary](https://guykisel.github.io/robotframework-faker/
