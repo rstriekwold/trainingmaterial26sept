@@ -17,7 +17,7 @@ ${ENVIRONMENT_VARIABLE}=    %{PATH=Default value}
 
 
 *** Test Cases ***
-Exercise 14 - Call keywords with a varying number of arguments
+Exercise 13 - Call keywords with a varying number of arguments
     A keyword without arguments
     A keyword with a required argument    Argument
     A keyword with a required argument    argument=Argument
@@ -29,11 +29,11 @@ Exercise 14 - Call keywords with a varying number of arguments
     A keyword with one or more arguments    arg1
     A keyword with one or more arguments    arg1    arg2    arg3
 
-Exercise 14 - Call a keyword that returns a value
+Exercise 13 - Call a keyword that returns a value
     ${value}=    A keyword that returns a value
     Log    ${value}    # Return value
 
-Exercise 14 - Do conditional IF - ELSE IF - ELSE execution
+Exercise 13 - Do conditional IF - ELSE IF - ELSE execution
     IF    ${NUMBER} > 1
         Log    Greater than one.
     ELSE IF    "${STRING}" == "dog"
@@ -42,7 +42,7 @@ Exercise 14 - Do conditional IF - ELSE IF - ELSE execution
         Log    Probably a cat.
     END
 
-Exercise 14 - Loop a list
+Exercise 13 - Loop a list
     Log    ${LIST}    # ['one', 'two', 'three']
     FOR    ${item}    IN    @{LIST}
         Log    ${item}    # one, two, three
@@ -51,7 +51,7 @@ Exercise 14 - Loop a list
         Log    ${item}    # one, two, three
     END
 
-Exercise 14 - Loop a dictionary
+Exercise 13 - Loop a dictionary
     Log    ${DICTIONARY}
     # {'string': 'cat', 'number': 1, 'list': ['one', 'two', 'three']}
     FOR    ${key_value_tuple}    IN    &{DICTIONARY}
@@ -63,22 +63,22 @@ Exercise 14 - Loop a dictionary
         # string=cat, number=1, list=['one', 'two', 'three']
     END
 
-Exercise 14 - Loop a range from 0 to end index
+Exercise 13 - Loop a range from 0 to end index
     FOR    ${index}    IN RANGE    10
         Log    ${index}    # 0-9
     END
 
-Exercise 14 - Loop a range from start to end index
+Exercise 13 - Loop a range from start to end index
     FOR    ${index}    IN RANGE    1    10
         Log    ${index}    # 1-9
     END
 
-Exercise 14 - Loop a range from start to end index with steps
+Exercise 13 - Loop a range from start to end index with steps
     FOR    ${index}    IN RANGE    0    10    2
         Log    ${index}    # 0, 2, 4, 6, 8
     END
 
-Exercise 14 - Nest loops
+Exercise 13 - Nest loops
     @{alphabets}=    Create List    a    b    c
     Log    ${alphabets}    # ['a', 'b', 'c']
     @{numbers}=    Create List    ${1}    ${2}    ${3}
@@ -90,41 +90,41 @@ Exercise 14 - Nest loops
         END
     END
 
-Exercise 14 - Exit a loop on condition
+Exercise 13 - Exit a loop on condition
     FOR    ${i}    IN RANGE    5
         IF    ${i} == 2    BREAK
         Log    ${i}    # 0, 1
     END
 
-Exercise 14 - Continue a loop from the next iteration on condition
+Exercise 13 - Continue a loop from the next iteration on condition
     FOR    ${i}    IN RANGE    3
         IF    ${i} == 1    CONTINUE
         Log    ${i}    # 0, 2
     END
 
-Exercise 14 - Create a scalar variable
+Exercise 13 - Create a scalar variable
     ${animal}=    Set Variable    dog
     Log    ${animal}    # dog
     Log    ${animal}[0]    # d
     Log    ${animal}[-1]    # g
 
-Exercise 14 - Create a number variable
+Exercise 13 - Create a number variable
     ${Ï€}=    Set Variable    ${3.14}
     Log    ${Ï€}    # 3.14
 
-Exercise 14 - Create a list variable
+Exercise 13 - Create a list variable
     @{animals}=    Create List    dog    cat    bear
     Log    ${animals}    # ['dog', 'cat', 'bear']
     Log    ${animals}[0]    # dog
     Log    ${animals}[-1]    # bear
 
-Exercise 14 - Create a dictionary variable
+Exercise 13 - Create a dictionary variable
     &{dictionary}=    Create Dictionary    key1=value1    key2=value2
     Log    ${dictionary}    # {'key1': 'value1', 'key2': 'value2'}
     Log    ${dictionary}[key1]    # value1
     Log    ${dictionary.key2}    # value2
 
-Exercise 14 - Access the items in a sequence (list, string)
+Exercise 13 - Access the items in a sequence (list, string)
     ${string}=    Set Variable    Hello world!
     Log    ${string}[0]    # H
     Log    ${string}[:5]    # Hello
@@ -134,24 +134,24 @@ Exercise 14 - Access the items in a sequence (list, string)
     Log    ${list}    # ['one', 'two', 'three', 'four', 'five']
     Log    ${list}[0:6:2]    # ['one', 'three', 'five']
 
-Exercise 14 - Split arguments to multiple lines
+Exercise 13 - Split arguments to multiple lines
     A keyword with any number of arguments
     ...    arg1
     ...    arg2
     ...    arg3
 
-Exercise 14 - Log available variables
+Exercise 13 - Log available variables
     Log Variables
     # ${/} = /
     # &{DICTIONARY} = { string=cat | number=1 | list=['one', 'two', 'three'] }
     # ${OUTPUT_DIR} = /Users/<username>/...
     # ...
 
-Exercise 14 - Evaluate Python expressions
+Exercise 13 - Evaluate Python expressions
     ${path}=    Evaluate    os.environ.get("PATH")
     ${path}=    Set Variable    ${{os.environ.get("PATH")}}
 
-Exercise 14 - Use special variables
+Exercise 13 - Use special variables
     Log    ${EMPTY}    # Like the ${SPACE}, but without the space.
     Log    ${False}    # Boolean False.
     Log    ${None}    # Python None
@@ -161,14 +161,14 @@ Exercise 14 - Use special variables
     Log    "${SPACE}"    # Quoted space (" ").
     Log    ${True}    # Boolean True.
 
-Exercise 14 - TRY / EXCEPT: Catch any exception
+Exercise 13 - TRY / EXCEPT: Catch any exception
     TRY
         Fail
     EXCEPT
         Log    EXCEPT with no arguments catches any exception.
     END
 
-Exercise 14 - TRY / EXCEPT: Catch an exception by exact message
+Exercise 13 - TRY / EXCEPT: Catch an exception by exact message
     TRY
         Fail    Error message
     EXCEPT    Error message
@@ -176,7 +176,7 @@ Exercise 14 - TRY / EXCEPT: Catch an exception by exact message
         Log    Enables error-specific exception handling.
     END
 
-Exercise 14 - TRY / EXCEPT: Multiple EXCEPT statements
+Exercise 13 - TRY / EXCEPT: Multiple EXCEPT statements
     TRY
         Fail    Error message
     EXCEPT    Another error message
@@ -185,14 +185,14 @@ Exercise 14 - TRY / EXCEPT: Multiple EXCEPT statements
         Log    Catches the "Error message" exception.
     END
 
-Exercise 14 - TRY / EXCEPT: Multiple messages in EXCEPT statement
+Exercise 13 - TRY / EXCEPT: Multiple messages in EXCEPT statement
     TRY
         Fail    CCC
     EXCEPT    AAA    BBB    CCC
         Log    Catches any "AAA", "BBB", or "CCC" exception.
     END
 
-Exercise 14 - TRY / EXCEPT: Catch a specific exception, or an unexpected exception
+Exercise 13 - TRY / EXCEPT: Catch a specific exception, or an unexpected exception
     TRY
         Fail    Error message
     EXCEPT    Another message
@@ -202,21 +202,21 @@ Exercise 14 - TRY / EXCEPT: Catch a specific exception, or an unexpected excepti
         Log    Useful for handling unexpected exceptions.
     END
 
-Exercise 14 - TRY / EXCEPT: Catch exceptions where the message starts with
+Exercise 13 - TRY / EXCEPT: Catch exceptions where the message starts with
     TRY
         Fail    A long error message with lots of details
     EXCEPT    A long error message    type=start
         Log    Matches the start of an error message.
     END
 
-Exercise 14 - TRY / EXCEPT: Capture the error message
+Exercise 13 - TRY / EXCEPT: Capture the error message
     TRY
         Fail    Goodbye, world!
     EXCEPT    AS    ${error_message}
         Log    ${error_message}    # Goodbye, world!
     END
 
-Exercise 14 - TRY / EXCEPT: Using ELSE when no exceptions occured
+Exercise 13 - TRY / EXCEPT: Using ELSE when no exceptions occured
     TRY
         Log    All good!
     EXCEPT    Error message
@@ -225,7 +225,7 @@ Exercise 14 - TRY / EXCEPT: Using ELSE when no exceptions occured
         Log    No error occured.
     END
 
-Exercise 14 - TRY / EXCEPT / FINALLY: Always execute code no matter if exceptions or not
+Exercise 13 - TRY / EXCEPT / FINALLY: Always execute code no matter if exceptions or not
     TRY
         Log    All good!
     FINALLY
@@ -239,7 +239,7 @@ Exercise 14 - TRY / EXCEPT / FINALLY: Always execute code no matter if exception
         Log    FINALLY is always executed.
     END
 
-Exercise 14 - TRY / EXCEPT / ELSE / FINALLY: All together!
+Exercise 13 - TRY / EXCEPT / ELSE / FINALLY: All together!
     TRY
         Fail    Error message
     EXCEPT
@@ -250,21 +250,21 @@ Exercise 14 - TRY / EXCEPT / ELSE / FINALLY: All together!
         Log    FINALLY is always executed.
     END
 
-Exercise 14 - TRY / EXCEPT: Glob pattern matching
+Exercise 13 - TRY / EXCEPT: Glob pattern matching
     TRY
         Fail    My error: 99 occured
     EXCEPT    My error: *    type=glob
         Log    Catches by glob pattern matching.
     END
 
-Exercise 14 - TRY / EXCEPT: Regular expression matching
+Exercise 13 - TRY / EXCEPT: Regular expression matching
     TRY
         Fail    error 99 occured
     EXCEPT    [Ee]rror \\d+ occured    type=regexp
         Log    Catches by regular expression pattern matching.
     END
 
-Exercise 14 - WHILE: Loop while the default limit (10000) is hit
+Exercise 13 - WHILE: Loop while the default limit (10000) is hit
     TRY
         WHILE    True
             Log    Executed until the default loop limit (10000) is hit.
@@ -273,7 +273,7 @@ Exercise 14 - WHILE: Loop while the default limit (10000) is hit
         Log    The loop did not finish within the limit.
     END
 
-Exercise 14 - WHILE: Loop while the given limit is hit
+Exercise 13 - WHILE: Loop while the given limit is hit
     TRY
         WHILE    True    limit=10
             Log    Executed until the given loop limit (10) is hit.
@@ -282,14 +282,14 @@ Exercise 14 - WHILE: Loop while the given limit is hit
         Log    The loop did not finish within the limit.
     END
 
-Exercise 14 - WHILE: Loop while condition evaluates to True
+Exercise 13 - WHILE: Loop while condition evaluates to True
     ${x}=    Set Variable    ${0}
     WHILE    ${x} < 3
         Log    Executed as long as the condition is True.
         ${x}=    Evaluate    ${x} + 1
     END
 
-Exercise 14 - WHILE: Skip a loop iteration with CONTINUE
+Exercise 13 - WHILE: Skip a loop iteration with CONTINUE
     ${x}=    Set Variable    ${0}
     WHILE    ${x} < 3
         ${x}=    Evaluate    ${x} + 1
@@ -298,7 +298,7 @@ Exercise 14 - WHILE: Skip a loop iteration with CONTINUE
         Log   x = ${x}    # x = 1, x = 3
     END
 
-Exercise 14 - WHILE: Exit loop with BREAK
+Exercise 13 - WHILE: Exit loop with BREAK
     WHILE    True
         BREAK
         Log    This will not be logged.
