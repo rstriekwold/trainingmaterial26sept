@@ -6,51 +6,20 @@ Suite Teardown                  Close All Browser Sessions
 *** Test Cases ***
 Exercise 12 - End to End test using Custom Keywords after Step 1
     Appstate                    Home
-    Launch App                  Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import
-    VerifyText                  Lead Information
-    
+
+    # In this exercise we use the same salesforce scenario built with exercise 6.
     # At this point the test data in the custom keywords are fixed.
-    
-    Step 1 - Create Lead First Step   
 
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
-    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
-
-    Step 1 - Verify Lead
-
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-
-    Step 1 - Delete Lead
+    Create Lead - Step 1 Grouping
+    Verify Lead - Step 1 Grouping
+    Delete Lead - Step 1 Grouping
 
 Exercise 12 - End to End test using Custom Keywords after Step 2
     # At this point the test data in the custom keywords are variables
     Appstate                    Home
-    Launch App                  Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import
-    VerifyText                  Lead Information
-    Step 2 - Create Lead Second Step     lead_status=Working  last_name=Smith    company=Growmore      salutation=Ms.    first_name=Tina    phone=+12234567858449    title=Manager    email=tina.smith@gmail.com    website=https://www.growmore.com/    lead_source=Advertisement
-    
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
-    Step 2 - Verify Lead                 last_name=Smith      salutation=Ms.    first_name=Tina     company=Growmore    phone=+12234567858449    title=Manager       website=https://www.growmore.com/ 
-    
-    LaunchApp                   Sales
-    ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
-    Step 2 - Delete Lead
+    Create Lead - Step 2 Replace values with arguments      lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
+    Verify Lead - Step 2 Replace values with arguments      last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
+    Delete Lead - Step 2 Replace values with arguments      last_name=Smith             first_name=Tina
 
 *** Keywords ***
 
@@ -58,14 +27,19 @@ Exercise 12 - End to End test using Custom Keywords after Step 2
     # Step 1 - Group keywords in Custom Keywords
     ##############################################################################################################################
 
-Step 1 - Create Lead First Step 
+Create Lead - Step 1 Grouping
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
     UseModal                    On                          # Only find fields from open modal dialog
     Picklist                    Salutation                  Ms.                         #optional
     TypeText                    First Name                  Tina                        #optional
     TypeText                    Last Name                   Smith                       #mandatory
     Picklist                    Lead Status                 Working                     #mandatory
     TypeText                    Phone                       +12234567858449             First Name             #optional
-    TypeText                    Company                     Growmore                    Industry              #mandatory
+    TypeText                    Company                     Growmore                    Industry               #mandatory
     TypeText                    Title                       Manager                     Address Information    #optional
     TypeText                    Email                       tina.smith@gmail.com        Rating                 #optional
     TypeText                    Website                     https://www.growmore.com/                          #optional
@@ -74,7 +48,12 @@ Step 1 - Create Lead First Step
     UseModal                    Off
     Sleep                       2
 
-Step 1 - Verify Lead
+Verify Lead - Step 1 Grouping
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    VerifyText                  Lead Information
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     ClickText                   Details                     anchor=Activity
     VerifyText                  Ms. Tina Smith              anchor=Details
     VerifyText                  Manager                     anchor=Details
@@ -83,7 +62,12 @@ Step 1 - Verify Lead
     VerifyField                 Website                     https://www.growmore.com/
     Log Screenshot
 
-Step 1 - Delete Lead
+Delete Lead - Step 1 Grouping
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
     ClickText                   Delete
     ClickText                   Delete
@@ -94,14 +78,19 @@ Step 1 - Delete Lead
     # Step 2 - Update Custom Keywords with arguments, making them generic for different test data, re-usable keywords
     ##############################################################################################################################
 
-Step 2 - Create Lead Second Step 
-    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
+Create Lead - Step 2 Replace values with arguments 
+    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
     UseModal                    On                          # Only find fields from open modal dialog
-    Run Keyword If              '${salutation}'!='${EMPTY}'                            Picklist               Salutation             Ms.                         #optional
+    Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  Ms.                       #optional
     Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  Tina                      #optional
     TypeText                    Last Name                   ${last_name}                #mandatory
     Picklist                    Lead Status                 ${lead_status}              #mandatory
-    Run Keyword If              '${phone}'!='${EMPTY}'     TypeText                    Phone                  +12234567858449             First Name                #optional
+    Run Keyword If              '${phone}'!='${EMPTY}'      TypeText                    Phone                  +12234567858449             First Name                #optional
     TypeText                    Company                     ${company}                  Last Name              #mandatory
     Run Keyword If              '${title}'!='${EMPTY}'      TypeText                    Title                  Manager                     Address Information       #optional
     Run Keyword If              '${email}'!='${EMPTY}'      TypeText                    Email                  tina.smith@gmail.com        Rating                    #optional
@@ -111,20 +100,31 @@ Step 2 - Create Lead Second Step
     UseModal                    Off
     Sleep                       2
 
-Step 2 - Verify Lead
-    [Arguments]                 ${lead_status}=${EMPTY}              ${last_name}=${EMPTY}                ${company}=${EMPTY}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}    ${title}=${EMPTY}    ${email}=${EMPTY}    ${website}=${EMPTY}    ${lead_source}=${EMPTY}
+Verify Lead - Step 2 Replace values with arguments
+    [Arguments]                 ${lead_status}=${EMPTY}     ${last_name}=${EMPTY}       ${company}=${EMPTY}    ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Details                     anchor=Activity
-    ${full_name}=               Catenate                    ${salutation}                        ${first_name}                        ${last_name}
-    VerifyText                  ${full_name}              anchor=Details
-    VerifyText                  ${title}                     anchor=Details
-    VerifyText                  ${phone}             anchor=Lead Status
+    ${full_name}=               Catenate                    ${salutation}               ${first_name}          ${last_name}
+    VerifyText                  ${full_name}                anchor=Details
+    VerifyText                  ${title}                    anchor=Details
+    VerifyText                  ${phone}                    anchor=Lead Status
     VerifyField                 Company                     ${company}
     VerifyField                 Website                     ${website}
     Log Screenshot
 
-Step 2 - Delete Lead
-    [Arguments]
-    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
+Delete Lead - Step 2 Replace values with arguments
+    [Arguments]                 ${first_name}               ${last_name}
+    Launch App                  Sales
+    ClickText                   Leads
+    VerifyText                  Recently Viewed             timeout=120s
+    ClickText                   New                         anchor=Import
+    VerifyText                  Lead Information
+    Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Delete
     ClickText                   Delete
     ClickText                   Close
