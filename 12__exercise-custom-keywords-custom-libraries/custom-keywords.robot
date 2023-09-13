@@ -3,13 +3,13 @@ Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
 Suite Teardown                  Close All Browser Sessions
 
+# In this exercise we use the same salesforce scenario built with exercise 6.
+
 *** Test Cases ***
+
 Exercise 12 - Custom Keywords - Step 1 Grouping
-    Appstate                    Home
-
-    # In this exercise we use the same salesforce scenario built with exercise 6.
     # At this point the test data in the custom keywords are fixed.
-
+    Appstate                    Home
     Create Lead Step 1 Grouping
     Verify Lead Step 1 Grouping
     Delete Lead Step 1 Grouping
