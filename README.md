@@ -16,7 +16,7 @@ Welcome to our Bitbucket repo. Here you can find and read all the exercises used
 10. [Pre- and Post Conditions](10__exercise-pre-post-conditions/)
 11. [Notifications and Dashboards](11__exercise-notifications-and-dashboards)
 12. [Custom Keywords and Custom Libraries](12__exercise-custom-keywords-custom-libraries)
-13. [Syntax Controls Conditons Loops and More](13__exercise-syntax-controls-conditions-loops-and-more)
+13. [Syntax Controls Conditions Loops and More](13__exercise-syntax-controls-conditions-loops-and-more)
 14. [Data Driven Testing](14__exercise-data-driven-testing)
 15. [Unique Test Data](15__exercise-unique-test-data)
 16. [Git Integration and Folder Composition](16__exercise-git-integration-and-folder-composition)
