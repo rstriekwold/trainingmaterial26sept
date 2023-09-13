@@ -30,13 +30,13 @@ Suite Teardown is executed after all tests cases have been executed, at the end 
 
 1. Create a new empty suite **exercise 10 pre and post conditions**
 
-2. Create a folder in the root named **exercise-10-pre-post-conditions**
+2. Create a folder in the root named **10__exercise-pre-post-conditions**
 
-3. In folder **exercise-10-pre-post-conditions**, create file pre-post-conditions.robot and copy the contents from here [pre-post-conditions.robot](pre-post-conditions.robot)
+3. In folder **10__exercise-pre-post-conditions**, create file pre-post-conditions.robot and copy the contents from here [pre-post-conditions.robot](pre-post-conditions.robot)
 
 4. Select suite **exercise 10 pre and post conditions**
 
-5. Open folder **exercise-10-pre-post-conditions**
+5. Open folder **10__exercise-pre-post-conditions**
 
 6. Execute Test Case **Exercise 10 - Using Suite Setup, Test Setup, Test Teardown and Suite Teardown from Settings**
 
