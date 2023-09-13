@@ -38,7 +38,7 @@ The purpose of this exercise is to learn how to setup MFA and run tests with MFA
 
 1. Create a new empty suite **exercise 8 MFA**
 
-2. Create a folder in the root named **exercise-8-mfa**
+2. Create a folder in the root named **08__exercise-multi-factor-authentication**
 
 3. In this foler, create file mfa-login.robot and copy the contents from here [mfa-login.robot](mfa-login.robot)
 
