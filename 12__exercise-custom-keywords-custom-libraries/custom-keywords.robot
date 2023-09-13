@@ -52,8 +52,8 @@ Verify Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
-    VerifyText                  Lead Information
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
+    VerifyText                  Lead Information  
     ClickText                   Details                     anchor=Activity
     VerifyText                  Ms. Tina Smith              anchor=Details
     VerifyText                  Manager                     anchor=Details
