@@ -15,7 +15,9 @@ Exercise 5 - Allowlist IPs at Setup Network Access
     ClickText              Setup
     ClickText              Opens in a new tab
     SwitchWindow           NEW
-    TypeText               Quick Find                  Network Access    anchor=Setup Home
+    VerifyText             Setup    anchor=Object Manager
+    TypeText               Quick Find   Network Access     tag=input                  anchor=Setup Home
+    Verify Text            Network Access                  anchor=Security
     ClickText              Network Access
 
     @{NorthAmericaIPs}=    Create List                 3.216.108.92      52.7.118.168          75.101.241.39
