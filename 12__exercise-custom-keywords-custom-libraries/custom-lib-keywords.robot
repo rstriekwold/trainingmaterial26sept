@@ -6,6 +6,6 @@ Suite Teardown                Close All Browser Sessions
 
 *** Test Cases ***
 
-Test the Custom Keyword
+Exercise 12 - Test the Custom Keyword from the Custom Library
     ${random_email}     Generate Random Emails    ${8}
     Log                 ${random_email}
