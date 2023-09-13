@@ -29,7 +29,7 @@ The purpose of this exercise is to learn how to find libraries and keywords. Use
 
 # Explore and view the QWord Palette
 
-1. In the folder **exercise-2-consulting-libraries**, open file libraries.robot
+1. In the folder **02__exercise-consulting-libraries**, open file libraries.robot
 
 2. Check out the QWord Palette and identify libraries and keywords out of the box.
 
