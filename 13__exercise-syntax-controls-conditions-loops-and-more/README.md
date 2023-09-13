@@ -1,10 +1,10 @@
-# Exercise 12 - Create Customer Keywords
+# Exercise 13 - Syntax Controls Conditions Loops and More
 
-Welcome to **Exercise 12**. Everything you need to know about creating Custom Keywords.
+Welcome to **Exercise 13**. Helping reference material with syntax.
 
 # Purpose
 
-The purpose of this exercise is to learn how Custom Keywords are created and used.
+The purpose of this exercise is to see different controls, conditions and loops in action. Using different data types such as scalar variables, lists and dictionaries.
 
 # Prerequisite(s)
 
@@ -14,19 +14,15 @@ The purpose of this exercise is to learn how Custom Keywords are created and use
 
 # Learning Objectives
 
-- Create Custom Keywords by Grouping keywords
-- Update Custom Keywords with Argument for any test data
-- Create Custom Keyword / Library using python
+- Create syntax reference material ready to be copied
 
-# Create Custom Keywords by Grouping keywords
+# Create syntax reference material ready to be copied
 
-Custom Keywords allow for making your test more readable.
+1. Create a new empty suite **exercise 13 syntax controls conditions loops and more**
 
-1. Create a new empty suite **exercise 10 pre and post conditions**
+2. Create a folder in the root named **13__exercise-syntax-controls-conditions-loops-and-more**
 
-2. Create a folder in the root named **exercise-10-pre-post-conditions**
-
-3. In folder **exercise-10-pre-post-conditions**, create file pre-post-conditions.robot and copy the contents from here [pre-post-conditions.robot](pre-post-conditions.robot)
+3. In folder **13__exercise-syntax-controls-conditions-loops-and-more**, create file pre-post-conditions.robot and copy the contents from here [pre-post-conditions.robot](pre-post-conditions.robot)
 
 4. Select suite **exercise 10 pre and post conditions**
 
