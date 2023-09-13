@@ -54,7 +54,7 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 1. Open empty suite **exercise 7 using variables**
 
-2. Create a folder in the root named **exercise-7-using-variables**
+2. Create a folder in the root named **07__exercise-using-variables**
 
 3. In this foler, create file variable-files.robot and copy the contents from here [variables-section.robot](variables-section.robot)
 
@@ -64,7 +64,7 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 1. Open empty suite **exercise 7 using variables**
 
-2. Open folder in the root named **exercise-7-using-variables**
+2. Open folder in the root named **07__exercise-using-variables**
 
 3. In this foler, create file variable-files.robot and copy the contents from here [variable-files.robot](variable-files.robot)
 
@@ -84,7 +84,7 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 1. Open empty suite **exercise 7 using variables**
 
-2. Open folder in the root named **exercise-7-using-variables**
+2. Open folder in the root named **07__exercise-using-variables**
 
 3. In this foler, create file set-variables-keywords.robot and copy the contents from here [set-variables-keywords.robot](set-variables-keywords.robot)
 
