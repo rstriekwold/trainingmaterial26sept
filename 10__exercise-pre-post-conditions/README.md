@@ -20,8 +20,6 @@ The purpose of this exercise is to learn how to setup Pre and Post Conditions wi
 
 # Understand Test Suites (files and directories)
 
-
-
 # Suite Level
 
 ## Suite Setup and Suite Teardown in Settings table
