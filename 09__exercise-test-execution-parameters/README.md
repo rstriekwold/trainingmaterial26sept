@@ -24,13 +24,13 @@ The purpose of this exercise is to learn how to run (groups of) tests with Copad
 
 1. Create a new empty suite **exercise 9 test execution parameters**
 
-2. Create a folder in the root named **exercise-9-test-execution-parameters**
+2. Create a folder in the root named **09__exercise-test-execution-parameters**
 
-3. In folder **exercise-9-test-execution-parameters**, create a new folder named **US-00001**
+3. In folder **09__exercise-test-execution-parameters**, create a new folder named **US-00001**
 
 4. In folder **US-00001**, create file US-00001.robot and copy the contents from here [US-00001.robot](US-00001/US-00001.robot)
 
-4. In folder **exercise-9-test-execution-parameters**, create a new folder named **regression**
+4. In folder **09__exercise-test-execution-parameters**, create a new folder named **regression**
 
 5. In folder **regression**, create file accounts.robot and copy the contents from here [01__accounts.robot](regression/01__accounts.robot)
 
