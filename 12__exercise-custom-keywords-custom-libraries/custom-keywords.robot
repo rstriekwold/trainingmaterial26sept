@@ -4,7 +4,7 @@ Suite Setup                     Setup Browser
 Suite Teardown                  Close All Browser Sessions
 
 *** Test Cases ***
-Exercise 12 - End to End test using Custom Keywords after Step 1
+Exercise 12 - Custom Keywords - Step 1 Grouping
     Appstate                    Home
 
     # In this exercise we use the same salesforce scenario built with exercise 6.
@@ -14,7 +14,7 @@ Exercise 12 - End to End test using Custom Keywords after Step 1
     Verify Lead - Step 1 Grouping
     Delete Lead - Step 1 Grouping
 
-Exercise 12 - End to End test using Custom Keywords after Step 2
+Exercise 12 - Custom Keywords - Step 2 Replace values with arguments
     # At this point the test data in the custom keywords are variables
     Appstate                    Home
     Create Lead - Step 2 Replace values with arguments      lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
