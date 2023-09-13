@@ -65,10 +65,9 @@ Verify Lead Step 1 Grouping
 Delete Lead Step 1 Grouping
     Launch App                  Sales
     ClickText                   Leads
-    VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import
-    VerifyText                  Lead Information
+    VerifyText                  Recently Viewed             timeout=120s  
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   Tina Smith
+    VerifyText                  Lead Information
     ClickText                   Delete
     ClickText                   Delete
     ClickText                   Close
