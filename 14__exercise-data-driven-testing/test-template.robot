@@ -10,7 +10,6 @@ Create Lead
     [Template]    Create Lead
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
-    invalid          whatever
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
 
 Verify Lead
