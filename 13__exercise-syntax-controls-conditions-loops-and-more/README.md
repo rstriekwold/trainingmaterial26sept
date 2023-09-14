@@ -22,7 +22,7 @@ The purpose of this exercise is to see different controls, conditions and loops 
 
 2. Create a folder in the root named **13__exercise-syntax-controls-conditions-loops-and-more**
 
-3. In folder **13__exercise-syntax-controls-conditions-loops-and-more**, create file pre-post-conditions.robot and copy the contents from here [pre-post-conditions.robot](pre-post-conditions.robot)
+3. In folder **13__exercise-syntax-controls-conditions-loops-and-more**, create file syntax.robot and copy the contents from here [syntax.robot](syntax.robot)
 
 4. Select suite **exercise 10 pre and post conditions**
 
