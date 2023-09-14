@@ -25,9 +25,9 @@ Delete Leads using Test Case Template
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
 
-*** Test Cases ***                                        lead_status         last_name    company
-Create Lead using Suite Test Template 1                   Working              Smith        Growmore
-Create Lead using Suite Test Template 2                   Working              Smith        Growmore
+*** Test Cases ***                                        lead_status         last_name    company        first_name
+Create Lead using Suite Test Template 1                   Working              Smith        Growmore      Tina
+Create Lead using Suite Test Template 2                   Working              Smith        Growmore      Tina
 
 
 *** Keywords ***
