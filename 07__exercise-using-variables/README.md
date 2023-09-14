@@ -86,6 +86,6 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Open folder in the root named **07__exercise-using-variables**
 
-3. In this foler, create file set-variables-keywords.robot and copy the contents from here [set-variables-keywords.robot](set-variables-keywords.robot)
+3. In this folder, create file set-variables-keywords.robot and copy the contents from here [set-variables-keywords.robot](set-variables-keywords.robot)
 
 4. Click **Live Test** button displayed just above the test case names and learn about **scope of variables** using different keywords.
