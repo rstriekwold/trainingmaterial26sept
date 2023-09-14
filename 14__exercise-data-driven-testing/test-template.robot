@@ -3,26 +3,31 @@ Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
 Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
+Test Template                   Create Lead
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
 *** Test Cases ***
-Create Lead
+Create Leads using Test Case Template
     [Template]    Create Lead
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
 
-Verify Lead
+Verify Leads using Test Case Template
     [Template]    Verify Lead
     last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
     last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
     last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
-Delete Lead
+Delete Leads using Test Case Template
     [Template]    Delete Lead
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
+
+*** Test Cases ***                                        lead_status         last_name    company
+Create Lead using Suite Test Template 1                   Working              Smith        Growmore
+Create Lead using Suite Test Template 2                   Working              Smith        Growmore
 
 Exercise 14 - Data Driven using Test Template
     # At this point the test data in the custom keywords are variables
