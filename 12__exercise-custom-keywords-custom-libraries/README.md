@@ -1,4 +1,4 @@
-# Exercise 12 - Create Customer Keywords
+# Exercise 12 - Create Custom Keywords
 
 Welcome to **Exercise 12**. Everything you need to know about creating Custom Keywords.
 
