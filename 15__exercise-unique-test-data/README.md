@@ -18,7 +18,6 @@ The purpose of this exercise is to generate unique tests data for your tests. Im
 
 # Generate Unique Test Data
 
-
 1. Create a new empty suite **exercise 15 unique test data**
 
 2. Create a folder in the root named **15__exercise-unique-test-data**
