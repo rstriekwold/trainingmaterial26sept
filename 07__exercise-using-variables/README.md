@@ -56,7 +56,7 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Create a folder in the root named **07__exercise-using-variables**
 
-3. In this foler, create file variable-files.robot and copy the contents from here [variables-section.robot](variables-section.robot)
+3. In this folder, create file variable-files.robot and copy the contents from here [variables-section.robot](variables-section.robot)
 
 4. Click **Live Test** button displayed just above the test case name **Variables Section** 
 
@@ -66,15 +66,15 @@ The purpose of this exercise is to learn how to create and use variables in mult
 
 2. Open folder in the root named **07__exercise-using-variables**
 
-3. In this foler, create file variable-files.robot and copy the contents from here [variable-files.robot](variable-files.robot)
+3. In this folder, create file variable-files.robot and copy the contents from here [variable-files.robot](variable-files.robot)
 
-4. In this foler, create file PythonVariables.py and copy the contents from here [PythonVariables.py](PythonVariables.py)
+4. In this folder, create file PythonVariables.py and copy the contents from here [PythonVariables.py](PythonVariables.py)
 
-5. In this foler, create file YamlVariables.yaml and copy the contents from here [YamlVariables.yaml](YamlVariables.yaml)
+5. In this folder, create file YamlVariables.yaml and copy the contents from here [YamlVariables.yaml](YamlVariables.yaml)
 
-6. In this foler, create file DynamicVariables.py and copy the contents from here [DynamicVariables.py](DynamicVariables.py)
+6. In this folder, create file DynamicVariables.py and copy the contents from here [DynamicVariables.py](DynamicVariables.py)
 
-7. In this foler, create file EnvVariables.py and copy the contents from here [EnvVariables.py](EnvVariables.py)
+7. In this folder, create file EnvVariables.py and copy the contents from here [EnvVariables.py](EnvVariables.py)
 
 8. Specific to YAML, In the **root** folder, create file requirements.txt and copy the contents from here [requirements.txt](../requirements.txt)
 
