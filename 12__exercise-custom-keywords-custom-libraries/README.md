@@ -30,6 +30,8 @@ Custom Keywords allow for making your test more readable.
 
 4. View and review **Test Case Exercise 12 - Custom Keywords - Step 1 Grouping and it's Custom Keywords** written in the keywords table below the test cases.
 
+5. Run the test cases in live testing
+
 # Update Custom Keywords with Argument for any test data
 
 Custom Keywords allow for re-using automated assets that were created before. Add arguments to it to pass any test data to it.
@@ -41,6 +43,8 @@ Custom Keywords allow for re-using automated assets that were created before. Ad
 3. Open custom-keywords.robot
 
 4. View and review Test Case **Exercise 12 - Custom Keywords - Step 2 Replace values with arguments** and it's Custom Keywords written in the keywords table below the test cases.
+
+5. Run the test cases in live testing
 
 # Create Custom Keyword / Library using python
 
@@ -55,3 +59,5 @@ Custom Keywords written with a python library allows for more technical implemen
 4. In the root folder create a folder named **libraries**
 
 5. In folder **resources**, create file CustomLib.py and copy the contents from here [CustomLib.py](../libraries/CustomLib.py)
+
+6. Run the test case in **custom-lib-keywords.robot** using live testing
