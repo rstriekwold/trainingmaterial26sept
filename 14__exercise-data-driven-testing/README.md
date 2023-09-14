@@ -23,11 +23,11 @@ The purpose of this exercise is to learn how data driven testing can be applied,
 
 Let's start with a clearly descriptive data driven tests using Test Data internally within the robot file itself.
 
-1. Create a new empty suite **exercise 12 custom keywords custom libraries**
+1. Create a new empty suite **exercise 14 data driven testing**
 
-2. Create a folder in the root named **12__exercise-custom-keywords-custom-libraries**
+2. Create a folder in the root named **14__exercise-data-driven-testing**
 
-3. In folder **12__exercise-custom-keywords-custom-libraries**, create file custom-keywords.robot and copy the contents from here [custom-keywords.robot](custom-keywords.robot)
+3. In folder **14__exercise-data-driven-testing**, create file custom-keywords.robot and copy the contents from here [custom-keywords.robot](custom-keywords.robot)
 
 4. View and review **Test Case Exercise 12 - Custom Keywords - Step 1 Grouping and it's Custom Keywords** written in the keywords table below the test cases.
 
