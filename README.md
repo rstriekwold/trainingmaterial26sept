@@ -20,13 +20,13 @@ Welcome to our Bitbucket repo. Here you can find and read all the exercises used
 14. [Data Driven Testing](14__exercise-data-driven-testing)
 15. [Unique Test Data](15__exercise-unique-test-data)
 16. [Git Integration and Folder Composition](16__exercise-git-integration-and-folder-composition)
-17. [API Testing with CRT](17__exercise-api-testing)
-18. [Test Scheduling](18__exercise-test-scheduling)
-19. [CRT API Capabilities for non Copado CI/CD](19__exercise-crt-api)
-20. [Agile Testing / User Story Testing with Copado Agile](20__exercise-agile-user-story-testing-with-copado-agile)
-21. [Continuous Testing within Copado CI/CD](21__exercise-continuous-testing-within-copado-cicd)
-22. [Install and Configure On Premise Test Development using VSCode](22__exercise-on-premise-test-development-vscode)
-23. [Mobile Testing](23__exercise-mobile-testing)
+17. [Test Scheduling](17__exercise-test-scheduling)
+18. [Agile Testing / User Story Testing with Copado Agile](18__exercise-agile-user-story-testing-with-copado-agile)
+19. [Continuous Testing within Copado CI/CD](19__exercise-continuous-testing-within-copado-cicd)
+20. [Install and Configure On Premise Test Development using VSCode](20__exercise-on-premise-test-development-vscode)
+21. [API Testing with CRT](21__exercise-api-testing)
+22. [Mobile Testing](22__exercise-mobile-testing)
+23. [CRT API Capabilities for non Copado CI/CD](23__exercise-crt-api)
 
 # Examples
 
