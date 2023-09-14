@@ -1,6 +1,7 @@
 *** Settings ***
 Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
+Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
