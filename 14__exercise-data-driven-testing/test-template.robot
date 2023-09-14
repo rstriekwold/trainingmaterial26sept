@@ -29,12 +29,6 @@ Delete Leads using Test Case Template
 Create Lead using Suite Test Template 1                   Working              Smith        Growmore
 Create Lead using Suite Test Template 2                   Working              Smith        Growmore
 
-Exercise 14 - Data Driven using Test Template
-    # At this point the test data in the custom keywords are variables
-    Appstate                    Home
-    Create Lead      lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
-    Verify Lead      last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
-    Delete Lead      last_name=Smith             first_name=Tina
 
 *** Keywords ***
 
