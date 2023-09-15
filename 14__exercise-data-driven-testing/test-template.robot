@@ -98,3 +98,5 @@ Unique Test Data
     Set Suite Variable          ${company}                  ${Company}
     ${First_Name}=              First Name
     Set Suite Variable          ${first_name}               ${First_Name}
+    ${Salutation}=              Suffix Female
+    Set Suite Variable          ${salutation}               ${Salutation}      
