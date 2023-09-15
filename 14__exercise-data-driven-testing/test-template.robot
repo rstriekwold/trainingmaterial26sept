@@ -2,10 +2,10 @@
 Resource                        ../resources/common.robot
 Library                         FakerLibrary
 Suite Setup                     Setup Browser
-Test Setup                      Run Keywords    Home    Unique Test Data
+Test Setup                      Run Keywords                Home                        Unique Test Data
 Suite Teardown                  Close All Browser Sessions
-# Test Template                   Create Lead
-Test Template                   Create Verify and Delete Lead 
+# Test Template                 Create Lead
+Test Template                   Create Verify and Delete Lead
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
@@ -14,18 +14,18 @@ Create Lead using Suite Test Template 1                   Working              $
 Create Lead using Suite Test Template 2                   Working              Smith                         Growmore       Tina          Ms.
 
 Create Leads using Test Case Template
-    [Template]    Create Lead
-    lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
-    lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
-    lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
+    [Template]                  Create Lead
+    lead_status=Working         last_name=Smith             company=Growmore            salutation=Ms.         first_name=Tina             phone=+12234567858449     title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/                      lead_source=Advertisement
+    lead_status=Working         last_name=Smith             company=Growmore            salutation=Ms.         first_name=Tina             phone=+12234567858449     title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/                      lead_source=Advertisement
+    lead_status=Working         last_name=Smith             company=Growmore            salutation=Ms.         first_name=Tina             phone=+12234567858449     title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/                      lead_source=Advertisement
 
 Verify Leads using Test Case Template
-    [Template]    Verify Lead
-    last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
-    last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
-    last_name=Smith             salutation=Ms.         first_name=Tina             company=Growmore          phone=+12234567858449    title=Manager               website=https://www.growmore.com/
+    [Template]                  Verify Lead
+    last_name=Smith             salutation=Ms.              first_name=Tina             company=Growmore       phone=+12234567858449       title=Manager             website=https://www.growmore.com/
+    last_name=Smith             salutation=Ms.              first_name=Tina             company=Growmore       phone=+12234567858449       title=Manager             website=https://www.growmore.com/
+    last_name=Smith             salutation=Ms.              first_name=Tina             company=Growmore       phone=+12234567858449       title=Manager             website=https://www.growmore.com/
 Delete Leads using Test Case Template
-    [Template]    Delete Lead
+    [Template]                  Delete Lead
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
@@ -36,13 +36,13 @@ Delete Leads using Test Case Template
 *** Keywords ***
 
 Create Verify and Delete Lead
-    [Arguments]                ${lead_status}              ${last_name}                ${company}    ${first_name}    ${salutation}=${EMPTY}          ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Create Lead                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Verify Lead                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}   ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Delete Lead                ${first_name}               ${last_name}
+    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${first_name}               ${salutation}=${EMPTY}    ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Create Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Delete Lead                 ${first_name}               ${last_name}
 
 Create Lead 
-    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
@@ -64,13 +64,13 @@ Create Lead
     Sleep                       2
 
 Verify Lead
-    [Arguments]                 ${lead_status}=${EMPTY}     ${last_name}=${EMPTY}       ${company}=${EMPTY}    ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    [Arguments]                 ${lead_status}=${EMPTY}     ${last_name}=${EMPTY}       ${company}=${EMPTY}    ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Details                     anchor=Activity
-    Log Many                    ${salutation}               ${first_name}          ${last_name}
+    Log Many                    ${salutation}               ${first_name}               ${last_name}
     ${full_name}=               Catenate                    ${salutation}               ${first_name}          ${last_name}
     Log                         ${full_name}
     VerifyText                  ${full_name}                anchor=Details
@@ -93,4 +93,4 @@ Delete Lead
 
 Unique Test Data
     ${Last_Name}=               Last Name
-    Set Suite Variable     ${last_name}             ${Last_Name}
+    Set Suite Variable          ${last_name}                ${Last_Name}
