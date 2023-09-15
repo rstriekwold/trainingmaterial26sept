@@ -2,7 +2,7 @@
 Resource                        ../resources/common.robot
 Library                       FakerLibrary
 Suite Setup                     Setup Browser
-Test Setup                      Run Keywords    Home    ${last_name}=  FakerLibrary.Last Name
+Test Setup                      Run Keywords    Home    Set Suite Variable     ${last_name}             I'm a suite variable
 Suite Teardown                  Close All Browser Sessions
 # Test Template                   Create Lead
 Test Template                   Create Verify and Delete Lead 
