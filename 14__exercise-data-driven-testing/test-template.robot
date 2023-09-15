@@ -3,7 +3,8 @@ Resource                        ../resources/common.robot
 Suite Setup                     Setup Browser
 Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
-Test Template                   Create Lead
+# Test Template                   Create Lead
+Test Template                   Create Verify and Delete Lead 
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
@@ -32,6 +33,12 @@ Delete Leads using Test Case Template
 
 
 *** Keywords ***
+
+Create Verify and Delete Lead
+    [Arguments]                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Create Lead                ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Verify Lead                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}   ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Delete Lead                ${first_name}               ${last_name}
 
 Create Lead 
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
