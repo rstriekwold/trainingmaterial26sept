@@ -1,5 +1,6 @@
 *** Settings ***
 Resource                        ../resources/common.robot
+Library                       FakerLibrary
 Suite Setup                     Setup Browser
 Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
@@ -9,7 +10,7 @@ Test Template                   Create Verify and Delete Lead
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
 *** Test Cases ***                                        lead_status         last_name    company        first_name
-Create Lead using Suite Test Template 1                   Working              Smith        Growmore      Tina
+Create Lead using Suite Test Template 1                   Working              FakerLibrary.Last_Name        Growmore      Tina
 Create Lead using Suite Test Template 2                   Working              Smith        Growmore      Tina
 
 Create Leads using Test Case Template
