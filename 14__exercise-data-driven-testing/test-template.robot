@@ -37,7 +37,7 @@ Delete Leads using Test Case Template
 
 Create Verify and Delete Lead
     [Arguments]                ${lead_status}              ${last_name}                ${company}    ${first_name}    ${salutation}=${EMPTY}          ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Create Lead                ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Create Lead                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}    ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Verify Lead                ${lead_status}              ${last_name}                ${company}    ${salutation}=${EMPTY}      ${first_name}   ${phone}=${EMPTY}        ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Delete Lead                ${first_name}               ${last_name}
 
@@ -70,7 +70,9 @@ Verify Lead
     VerifyText                  Recently Viewed             timeout=120s
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Details                     anchor=Activity
+    Log Many                    ${salutation}               ${first_name}          ${last_name}
     ${full_name}=               Catenate                    ${salutation}               ${first_name}          ${last_name}
+    Log                         ${full_name}
     VerifyText                  ${full_name}                anchor=Details
     VerifyText                  ${title}                    anchor=Details
     VerifyText                  ${phone}                    anchor=Lead Status
@@ -90,5 +92,5 @@ Delete Lead
     Log Screenshot
 
 Unique Test Data
-    ${Last_Name}               Last Name
+    ${Last_Name}=               Last Name
     Set Suite Variable     ${last_name}             ${Last_Name}
