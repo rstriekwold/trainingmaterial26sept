@@ -9,9 +9,9 @@ Test Template                   Create Verify and Delete Lead
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
-*** Test Cases ***                                        lead_status         last_name                      company        first_name    salutation
-Create Lead using Suite Test Template 1                   Working              ${last_name}                  Growmore       Tina          Ms.
-Create Lead using Suite Test Template 2                   Working              Smith                         Growmore       Tina          Ms.
+*** Test Cases ***                                        lead_status         last_name                      company        first_name     salutation
+Create Lead using Suite Test Template Unique Data         Working              ${last_name}                  ${company}     ${first_name}  Ms.
+Create Lead using Suite Test Template Fixed Data          Working              Smith                         Growmore       Tina           Ms.
 
 Create Leads using Test Case Template
     [Template]                  Create Lead
@@ -94,3 +94,7 @@ Delete Lead
 Unique Test Data
     ${Last_Name}=               Last Name
     Set Suite Variable          ${last_name}                ${Last_Name}
+    ${Company}=                 Company
+    Set Suite Variable          ${company}                  ${Company}
+    ${First_Name}=              First Name
+    Set Suite Variable          ${first_name}               ${First_Name}
