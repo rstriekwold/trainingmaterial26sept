@@ -37,8 +37,8 @@ Delete Leads using Test Case Template
 
 Create Verify and Delete Lead
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${first_name}               ${salutation}=${EMPTY}    ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Create Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
-    Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}=${EMPTY}      ${first_name}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
+    Create Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
+    Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
     Delete Lead                 ${first_name}               ${last_name}
 
 Create Lead 
