@@ -92,8 +92,8 @@ Delete Lead
     Log Screenshot
 
 Unique Test Data
-    ${Last_Name}=               Last Name
-    Set Suite Variable          ${last_name}                ${Last_Name}
+    # ${Last_Name}=               Last Name
+    Set Suite Variable          ${last_name}                Last Name
     ${Company}=                 Company
     Set Suite Variable          ${company}                  ${Company}
     ${First_Name}=              First Name
