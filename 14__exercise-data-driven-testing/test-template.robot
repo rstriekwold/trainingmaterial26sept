@@ -11,7 +11,7 @@ Test Template                   Create Verify and Delete Lead
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
 *** Test Cases ***                                        lead_status         last_name                      company        first_name    salutation
-Create Lead using Suite Test Template 1                   Working              FakerLibrary.Last Name        Growmore       Tina          Ms.
+Create Lead using Suite Test Template 1                   Working              ${last_name}                  Growmore       Tina          Ms.
 Create Lead using Suite Test Template 2                   Working              Smith                         Growmore       Tina          Ms.
 
 Create Leads using Test Case Template
