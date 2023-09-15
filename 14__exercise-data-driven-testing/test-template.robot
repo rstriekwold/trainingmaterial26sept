@@ -90,4 +90,5 @@ Delete Lead
     Log Screenshot
 
 Unique Test Data
+    ${company}=               Company
     Set Suite Variable     ${last_name}             FakerLibrary.Last Name
