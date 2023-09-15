@@ -7,7 +7,10 @@ Test Template                   Create Lead
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
-*** Test Cases ***
+*** Test Cases ***                                        lead_status         last_name    company        first_name
+Create Lead using Suite Test Template 1                   Working              Smith        Growmore      Tina
+Create Lead using Suite Test Template 2                   Working              Smith        Growmore      Tina
+
 Create Leads using Test Case Template
     [Template]    Create Lead
     lead_status=Working         last_name=Smith        company=Growmore            salutation=Ms.            first_name=Tina          phone=+12234567858449       title=Manager               email=tina.smith@gmail.com                              website=https://www.growmore.com/    lead_source=Advertisement
@@ -25,9 +28,7 @@ Delete Leads using Test Case Template
     last_name=Smith             first_name=Tina
     last_name=Smith             first_name=Tina
 
-*** Test Cases ***                                        lead_status         last_name    company        first_name
-Create Lead using Suite Test Template 1                   Working              Smith        Growmore      Tina
-Create Lead using Suite Test Template 2                   Working              Smith        Growmore      Tina
+
 
 
 *** Keywords ***
