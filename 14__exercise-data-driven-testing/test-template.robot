@@ -1,6 +1,6 @@
 *** Settings ***
 Resource                        ../resources/common.robot
-Library                       FakerLibrary
+Library                         FakerLibrary
 Suite Setup                     Setup Browser
 Test Setup                      Run Keywords    Home    Unique Test Data
 Suite Teardown                  Close All Browser Sessions
@@ -90,5 +90,5 @@ Delete Lead
     Log Screenshot
 
 Unique Test Data
-    ${company}=               Company
-    Set Suite Variable     ${last_name}             FakerLibrary.Last Name
+    ${Last_Name}=               Last Name
+    Set Suite Variable     ${last_name}             ${Last_Name}
