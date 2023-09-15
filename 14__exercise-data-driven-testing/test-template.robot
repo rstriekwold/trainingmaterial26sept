@@ -5,7 +5,7 @@ Suite Setup                     Setup Browser
 Test Setup                      Run Keywords                Home                        Unique Test Data
 Suite Teardown                  Close All Browser Sessions
 # Test Template                 Create Lead
-Test Template                   Create Verify and Delete Lead
+Test Template                   Create Verify and Delete Lead End to End
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
@@ -35,7 +35,7 @@ Delete Leads using Test Case Template
 
 *** Keywords ***
 
-Create Verify and Delete Lead
+Create Verify and Delete Lead End to End
     [Arguments]                 ${lead_status}              ${last_name}                ${company}             ${first_name}               ${salutation}             ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
     Create Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
     Verify Lead                 ${lead_status}              ${last_name}                ${company}             ${salutation}               ${first_name}             ${phone}                    ${title}                    ${email}                    ${website}                  ${lead_source}
