@@ -7,7 +7,7 @@ Create Lead
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
-    ClickText                   New                         anchor=Import
+    ClickText                   New                         anchor=Import               delay=3s
     VerifyText                  Lead Information
     UseModal                    On                          # Only find fields from open modal dialog
     Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  Ms.                       #optional
