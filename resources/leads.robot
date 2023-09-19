@@ -23,6 +23,7 @@ Create Lead
     ClickText                   Save                        partial_match=False
     UseModal                    Off
     Sleep                       2
+    Log Screenshot
 
 Verify Lead
     [Arguments]                 ${lead_status}=${EMPTY}     ${last_name}=${EMPTY}       ${company}=${EMPTY}    ${salutation}=${EMPTY}      ${first_name}=${EMPTY}    ${phone}=${EMPTY}           ${title}=${EMPTY}           ${email}=${EMPTY}           ${website}=${EMPTY}         ${lead_source}=${EMPTY}
@@ -46,6 +47,7 @@ Delete Lead
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
+     Log Screenshot
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Delete
     ClickText                   Delete
