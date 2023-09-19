@@ -10,16 +10,16 @@ Create Lead
     ClickText                   New                         anchor=Import               delay=3s
     VerifyText                  Lead Information
     UseModal                    On                          # Only find fields from open modal dialog
-    Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  Ms.                       #optional
-    Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  Tina                      #optional
+    Run Keyword If              '${salutation}'!='${EMPTY}'                             Picklist               Salutation                  ${salutation}                       #optional
+    Run Keyword If              '${first_name}'!='${EMPTY}'                             TypeText               First Name                  ${first_name}                      #optional
     TypeText                    Last Name                   ${last_name}                #mandatory
     Picklist                    Lead Status                 ${lead_status}              #mandatory
-    Run Keyword If              '${phone}'!='${EMPTY}'      TypeText                    Phone                  +12234567858449             First Name                #optional
+    Run Keyword If              '${phone}'!='${EMPTY}'      TypeText                    Phone                  ${phone}             First Name                #optional
     TypeText                    Company                     ${company}                  Last Name              #mandatory
-    Run Keyword If              '${title}'!='${EMPTY}'      TypeText                    Title                  Manager                     Address Information       #optional
-    Run Keyword If              '${email}'!='${EMPTY}'      TypeText                    Email                  tina.smith@gmail.com        Rating                    #optional
-    Run Keyword If              '${website}'!='${EMPTY}'    TypeText                    Website                https://www.growmore.com/                             #optional
-    Run Keyword If              '${lead_source}'!='${EMPTY}'                            Picklist               Lead Source                 Advertisement             #optional
+    Run Keyword If              '${title}'!='${EMPTY}'      TypeText                    Title                  ${title}                     Address Information       #optional
+    Run Keyword If              '${email}'!='${EMPTY}'      TypeText                    Email                  ${email}        Rating                    #optional
+    Run Keyword If              '${website}'!='${EMPTY}'    TypeText                    Website                ${website}                             #optional
+    Run Keyword If              '${lead_source}'!='${EMPTY}'                            Picklist               Lead Source                 ${lead_source}             #optional
     ClickText                   Save                        partial_match=False
     UseModal                    Off
     Sleep                       2
