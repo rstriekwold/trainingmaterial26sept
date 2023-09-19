@@ -30,4 +30,5 @@ Unique Test Data
     ${First_Name}=              First Name
     Set Suite Variable          ${first_name}               ${First_Name}
     ${Salutation}=              Suffix Female
+    Log to Console      ${Salutation}        
     Set Suite Variable          ${salutation}               ${Salutation}      
