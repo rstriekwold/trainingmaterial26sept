@@ -5,6 +5,7 @@ Library                         FakerLibrary
 Suite Setup                     Setup Browser
 Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
+Force Tags                      data-tests
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
