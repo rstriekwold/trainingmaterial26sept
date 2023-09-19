@@ -1,7 +1,7 @@
 *** Settings ***
-Resource              ../resources/common.robot
-Suite Setup           Setup Browser
-Suite Teardown        Close All Browser Sessions
+Library               QWeb
+Suite Setup           Open Browser    about:blank    chrome
+Suite Teardown        CloseAllBrowsers
 
 
 *** Test Cases ***
