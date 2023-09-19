@@ -10,7 +10,7 @@ Test Template                   Create Verify and Delete Lead End to End
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
 
 *** Test Cases ***                                                                            lead_status         last_name                      company        first_name     salutation
-Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Unique Data         Working              ${last_name}                  ${company}     ${first_name}  ${salutation}
+Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Unique Data         Working              ${last_name}                  ${company}     ${first_name}  Ms.
 Exercise 14 - Data Driven Testing - Create Lead using Suite Test Template Fixed Data          Working              Smith                         Growmore       Tina           Ms.
 
 
@@ -28,6 +28,4 @@ Unique Test Data
     ${Company}=                 Company
     Set Suite Variable          ${company}                  ${Company}
     ${First_Name}=              First Name
-    Set Suite Variable          ${first_name}               ${First_Name}
-    ${Salutation}=              Suffix Female
-    Set Suite Variable          ${salutation}               ${Salutation}      
+    Set Suite Variable          ${first_name}               ${First_Name}   
