@@ -3,7 +3,7 @@ Resource                        ../resources/common.robot
 Resource                        ../resources/leads.robot
 Library                         FakerLibrary
 Suite Setup                     Setup Browser
-Test Setup                      Home
+# Test Setup                      Home
 Suite Teardown                  Close All Browser Sessions
 
 # In this exercise we use the same salesforce scenario built with exercise 6 and 12.
