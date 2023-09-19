@@ -47,7 +47,7 @@ Delete Lead
     Launch App                  Sales
     ClickText                   Leads
     VerifyText                  Recently Viewed             timeout=120s
-     Log Screenshot
+    Log Screenshot
     Wait Until Keyword Succeeds                             1 min                       5 sec                  ClickText                   ${first_name} ${last_name}
     ClickText                   Delete
     ClickText                   Delete
