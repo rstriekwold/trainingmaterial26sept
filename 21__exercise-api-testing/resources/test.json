@@ -1,0 +1,12 @@
+{
+    "inputParameters": [
+        {
+            "key": "BROWSER",
+            "value": "firefox"
+        },
+        {
+            "key": "-i",
+            "value": "robert"
+        }
+    ]
+}
