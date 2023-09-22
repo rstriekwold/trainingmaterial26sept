@@ -16,6 +16,9 @@ ${email_address}                pkievit+121@copado.com
 
 *** Test Cases ***
 
+# Copy the mailinator url from live testing into you own browser
+# For you to login to your salesforce trial org.
+# To also validate your browser and laptop.
 Exercise 4 - Do it for me! Create online mailbox
     GoTo                        https://www.mailinator.com/
     ${unique_mail_address}=     Generate Random String      14                          [NUMBERS]temponlinemail
