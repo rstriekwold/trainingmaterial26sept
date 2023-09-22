@@ -29,7 +29,7 @@ Exercise 4 - Do it for me! Create online mailbox
 Exercise 4 - Create Salesforce Trial Org
     GoTo                        https://www.salesforce.com/form/signup/freetrial-sales-pe/
 
-    #Handle Cookie Popup
+    # Handle Cookie Popup
     ${cookies_popup_present}=                               IsText                      COOKIES
     Log to Console              ${cookies_popup_present}
     IF                          ${cookies_popup_present}
