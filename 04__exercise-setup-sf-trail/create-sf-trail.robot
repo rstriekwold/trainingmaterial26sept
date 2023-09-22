@@ -133,6 +133,7 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
 # Keep the live testing open with your mailinator mailbox! 
 Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
     Appstate    Home
+    Log Screenshot
 
 *** Keywords ***
 
