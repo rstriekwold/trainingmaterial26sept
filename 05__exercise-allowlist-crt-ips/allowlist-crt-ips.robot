@@ -66,3 +66,20 @@ Exercise 5 - Allowlist IPs at Setup Network Access
     END
 
     Log Screenshot
+
+*** Keywords ***
+
+Home
+    [Documentation]             Navigate to homepage, login if needed
+    GoTo                        ${home_url}
+    ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                  2
+    Run Keyword If              ${login_status}             Login                   
+    ClickText                   Home
+    VerifyTitle                 Home | Salesforce
+
+Login
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username}                 delay=1
+    TypeText                    Password                    ${password}
+    ClickText                   Log In
