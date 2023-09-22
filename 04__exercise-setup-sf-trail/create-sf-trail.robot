@@ -30,11 +30,11 @@ Exercise 4 - Create Salesforce Trial Org
     GoTo                        https://www.salesforce.com/form/signup/freetrial-sales-pe/
 
     # Handle Cookie Popup
-    ${cookies_popup_present}=                               IsText                      COOKIES
-    Log to Console              ${cookies_popup_present}
-    IF                          ${cookies_popup_present}
-        ClickText               ACCEPT
-    END
+    # ${cookies_popup_present}=                               IsText                      COOKIES
+    # Log to Console              ${cookies_popup_present}
+    # IF                          ${cookies_popup_present}
+    #     ClickText               ACCEPT
+    # END
 
     VerifyText                  Start your free sales trial
 
