@@ -121,3 +121,22 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Log To Console              ${home_url}
     Log To Console              ${username}
     Log To Console              ${password}
+
+
+
+*** Keywords ***
+
+Home
+    [Documentation]             Navigate to homepage, login if needed
+    GoTo                        ${home_url}
+    ${login_status} =           IsText                      To access this page, you have to log in to Salesforce.                  2
+    Run Keyword If              ${login_status}             Login                   
+    ClickText                   Home
+    VerifyTitle                 Home | Salesforce
+
+Login
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username}                 delay=1
+    TypeText                    Password                    ${password}
+    ClickText                   Log In
