@@ -129,6 +129,7 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Log To Console             ${home_url}
     Log To Console             ${username}
     Log To Console             ${password}
+    Log to Console             ${mailinator_url}
     ClickText                  View profile
     ClickText                  Log Out
 
@@ -136,6 +137,11 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
 Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
     Appstate                   Home
     Log Screenshot
+    Log To Console             ${login_url}
+    Log To Console             ${home_url}
+    Log To Console             ${username}
+    Log To Console             ${password}
+    Log to Console             ${mailinator_url}
 
 *** Keywords ***
 
@@ -153,3 +159,4 @@ Login
     TypeText                   Username                    ${username}                 delay=1
     TypeText                   Password                    ${password}
     ClickText                  Log In
+    
