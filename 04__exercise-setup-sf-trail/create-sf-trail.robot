@@ -30,6 +30,7 @@ Exercise 4 - Do it for me! Create online mailbox
     Set Suite Variable          ${email_address}            ${unique_mail_address}@mailinator.com
     Log to Console              ${email_address}
     Open Window
+    Set Global Variable         ${password}                 ${password}
 
 
 Exercise 4 - Create Salesforce Trial Org
