@@ -5,10 +5,6 @@ Suite Teardown             Close All Browser Sessions
 *** Test Cases ***
 Exercise 5 - Allowlist IPs at Setup Network Access
     [tags]                 IPs
-    Log To Console             ${login_url} 
-    Log To Console             ${home_url}
-    Log To Console             ${username}
-    Log To Console             ${password}
     Appstate               Home
 
     ClickText              Setup
