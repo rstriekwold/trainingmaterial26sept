@@ -16,6 +16,9 @@ ${email_address}                pkievit+121@copado.com
 
 *** Test Cases ***
 
+# Try run Exercise 4 - Create Salesforce Trial Org with your own email address first!
+
+# Resort to Mailinator only in case you don't receive emails from Salesforce using +X in your mail address.
 # Copy the mailinator url from live testing into you own browser
 # For you to login to your salesforce trial org.
 # To also validate your browser and laptop.
