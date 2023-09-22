@@ -23,11 +23,11 @@ Exercise 4 - Do it for me! Create online mailbox
     Click Text                 GO
     Set Suite Variable         ${email_address}            ${unique_mail_address}@mailinator.com
     Log to Console             ${email_address}
-
+    Open Window
 
 
 Exercise 4 - Create Salesforce Trial Org
-    Open Window
+    
     GoTo                       https://www.salesforce.com/form/signup/freetrial-sales-pe/
     VerifyText                 Start your free sales trial
 
