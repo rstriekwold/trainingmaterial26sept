@@ -30,7 +30,7 @@ Exercise 4 - Do it for me! Create online mailbox
     Set Suite Variable         ${email_address}            ${unique_mail_address}@mailinator.com
     Log to Console             ${email_address}
     ${url}=                    GetUrl
-    Set Global Variable        ${mailinator_url}                 ${url}
+    Set Global Variable        ${mailinator_url}           ${url}
     Open Window
 
 
@@ -159,4 +159,3 @@ Login
     TypeText                   Username                    ${username}                 delay=1
     TypeText                   Password                    ${password}
     ClickText                  Log In
-    
