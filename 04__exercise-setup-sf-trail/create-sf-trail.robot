@@ -121,8 +121,12 @@ Exercise 4 - Do it for me! Read Mail, Verify Account and Set Password
     Log To Console              ${home_url}
     Log To Console              ${username}
     Log To Console              ${password}
+    ClickText    View profile
+    ClickText    Log Out
 
-
+# Keep the live testing open with your mailinator mailbox! 
+Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
+    Appstate    Home
 
 *** Keywords ***
 
