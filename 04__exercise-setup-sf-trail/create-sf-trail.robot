@@ -148,6 +148,7 @@ Exercise 4 - Do it for me! Login to the trail org to Verify Account if needed
 Home
     [Documentation]            Navigate to homepage, login if needed
     GoTo                       ${home_url}
+    Log Screenshot
     ${login_status} =          IsText                      To access this page, you have to log in to Salesforce.                     2
     Run Keyword If             ${login_status}             Login
     ClickText                  Home
