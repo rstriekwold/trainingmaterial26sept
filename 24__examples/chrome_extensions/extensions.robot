@@ -51,6 +51,7 @@ Pin All Extensions to the Menu
     Log to Console               ${result}          
 
     WHILE    True
+        QVision.Click Icon    puzzlegrey
         QVision.ClickIcon                        pin
         QVision.Click Icon    puzzlegrey
         ${result}=                   Is Icon                      pin
