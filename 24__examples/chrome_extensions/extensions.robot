@@ -27,7 +27,6 @@ Install Chrome Extension Salesforce inspector
 
 Install Extension from Chrome Web Store
     [Arguments]     ${search_query}    ${result_title}    ${unique_anchor}=${EMPTY}    
-    Open Browser    about:blank       chrome
     Set Library Search Order          QForce      QVision
     GoTo              chrome://extensions
     QVision.ClickText         Open Chrome Web Store
