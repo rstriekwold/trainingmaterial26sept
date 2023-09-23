@@ -32,8 +32,8 @@ Install Extension from Chrome Web Store
     QVision.ClickText         Open Chrome Web Store
     SwitchWindow              NEW
     TypeText                  Search the store    ${search_query}\n
-    Run Keyword If              '${unique_anchor}'=='${EMPTY}'    Click Text                ${result_title}        partial_match=False
-    Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}
+    Run Keyword If              '${unique_anchor}'=='${EMPTY}'    Click Text                ${result_title}    
+    Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}    
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
 
