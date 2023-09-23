@@ -10,33 +10,30 @@ Suite Teardown        CloseAllBrowsers
 
 
 *** Test Cases ***
-# Exercise 2 - Consulting Libraries
-#     List Directory     ${profile_dir}${/}Extensions
 
+Examples - Browser with extensions enabled
+    Go To    https://www.copado.com
 
-Get Profile Directory
+*** Keywords ***
+
+Examples - Install Chrome Extension SelectorsHub
+    [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
+    Install Extension from Chrome Web Store    SelectorsHub    SelectorsHub    Featured
+
+Examples - Install Chrome Extension Salesforce inspector
+    [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
+    Install Extension from Chrome Web Store    Salesforce inspector    SelectorsHub    Featured
+
+Install Extension from Chrome Web Store
+    [Arguments]     ${search_query}    ${result_title}    ${unique_anchor}=${EMPTY}    
     Open Browser    about:blank       chrome
     Set Library Search Order          QForce      QVision
     GoTo              chrome://extensions
     QVision.ClickText         Open Chrome Web Store
     SwitchWindow              NEW
-    TypeText                  Search the store    SelectorsHub
-
-    # Example: /tmp/.org.chromium.Chromium.W1fn10/Default
-    ${profile_dir}=    GetText          profile_path       tag=td
-    Set Global Variable    ${profile_dir}                  ${profile_dir}
-    Log To Console        ${profile_dir}
-    ${parts}=  Split String           ${profile_dir}       separator=/
-
-Unzip Extensions
-    Run Process	       apt-get install unzip	       shell=yes
-    # Run Process	       mkdir         ${profile_dir}${/}Extensions   	       shell=yes         
-    Run Process	       mkdir         ${CURDIR}${/}Extensions   	       shell=yes   
-
-    # SelectorsHub Extension for getting Xpaths
-    Run Process	       unzip ndgimibanhlabgdgjcpbbndiehljcpfh.zip -d ${CURDIR}${/}Extensions          	       shell=yes
-
-Open Browser with Extensions
-    # OpenBrowser     http://howbigismybrowser.com/   chrome   --user-data-dir\=/tmp/.org.chromium.Chromium.R1jojA,--profile-directory\=Default
-    OpenBrowser     http://howbigismybrowser.com/   chrome   --load-extension\=${CURDIR}${/}Extensions${/}ndgimibanhlabgdgjcpbbndiehljcpfh
+    TypeText                  Search the store    ${search_query}\n
+    Run Keyword If              '${unique_anchor}'=='${EMPTY}'    Click Text                ${result_title}        partial_match=False
+    Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}
+    Click Text                Add to Chrome
+    QVision.Click Text        Add extension
 
