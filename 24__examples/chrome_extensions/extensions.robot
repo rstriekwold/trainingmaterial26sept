@@ -22,7 +22,7 @@ Examples - Install Chrome Extension SelectorsHub
 
 Examples - Install Chrome Extension Salesforce inspector
     [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
-    Install Extension from Chrome Web Store    Salesforce inspector    SelectorsHub    Featured
+    Install Extension from Chrome Web Store    Salesforce inspector    Salesforce inspector
 
 Install Extension from Chrome Web Store
     [Arguments]     ${search_query}    ${result_title}    ${unique_anchor}=${EMPTY}    
