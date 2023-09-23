@@ -28,6 +28,7 @@ Install Chrome Extension Salesforce inspector
 Install Extension from Chrome Web Store
     [Arguments]     ${search_query}    ${result_title}    ${unique_anchor}=${EMPTY}    
     Set Library Search Order          QForce      QVision
+    SwitchWindow      1                
     GoTo              chrome://extensions
     QVision.ClickText         Open Chrome Web Store
     SwitchWindow              NEW
@@ -36,4 +37,5 @@ Install Extension from Chrome Web Store
     Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}    
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
+    SwitchWindow      1
 
