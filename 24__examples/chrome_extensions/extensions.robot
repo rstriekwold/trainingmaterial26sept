@@ -16,11 +16,11 @@ Examples - Browser with extensions enabled
 
 *** Keywords ***
 
-Examples - Install Chrome Extension SelectorsHub
+Install Chrome Extension SelectorsHub
     [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
     Install Extension from Chrome Web Store    SelectorsHub    SelectorsHub    Featured
 
-Examples - Install Chrome Extension Salesforce inspector
+Install Chrome Extension Salesforce inspector
     [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
     Install Extension from Chrome Web Store    Salesforce inspector    Salesforce inspector
 
