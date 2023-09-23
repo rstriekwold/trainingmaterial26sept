@@ -45,14 +45,14 @@ Install Extension from Chrome Web Store
     ClickText         OS
 
 Pin All Extensions to the Menu
+
     QVision.Click Icon    puzzlegrey
-    Sleep                        5s
-    
     ${result}=                   Is Icon                      pin
     Log to Console               ${result}          
 
     WHILE    True
         QVision.ClickIcon                        pin
+        QVision.Click Icon    puzzlegrey
         ${result}=                   Is Icon                      pin
     END         
     
