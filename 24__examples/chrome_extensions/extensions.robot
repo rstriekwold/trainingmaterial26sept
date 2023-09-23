@@ -1,5 +1,5 @@
 *** Settings ***
-Library               QWeb
+Library                QForce
 Library               OperatingSystem
 Library               Process
 Library                QVision
@@ -16,8 +16,10 @@ Suite Teardown        CloseAllBrowsers
 
 Get Profile Directory
     Open Browser    about:blank       chrome
+    Set Library Search Order          QForce      QVision
     GoTo              chrome://extensions
-    ClickText         Open Chrome Web Store
+    QVision.ClickText         Open Chrome Web Store
+    TypeText                  Search the store    SelectorsHub
 
     # Example: /tmp/.org.chromium.Chromium.W1fn10/Default
     ${profile_dir}=    GetText          profile_path       tag=td
