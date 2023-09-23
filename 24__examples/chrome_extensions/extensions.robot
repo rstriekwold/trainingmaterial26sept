@@ -44,16 +44,18 @@ Install Extension from Chrome Web Store
     GoTo              chrome://version
     ClickText         OS
 
-Pin Extension to the Menu
+Pin All Extensions to the Menu
     QVision.Click Icon    puzzlegrey
-    @{region_tuples}=                       QVision.Hover Text      text=Salesforce inspector
-    ${x1}=	Get From List	${region_tuples}	0
-    ${y1}=   Get From List	${region_tuples}	1
-    ${x2}=                Evaluate         ${x1} + 450               
-    ${y2}=                Evaluate         ${y1} + 35 
-    QVision.SetConfig                 region                        ${x1}    ${y1}    ${x2}    ${y2}
-    Sleep                        3s
-    Hover Icon                        pin
-    ClickIcon                        pin
+    Sleep                        5s
+    
+    ${result}=                   Is Icon                      pin
+    Log to Console               ${result}          
+
+    WHILE    True
+        QVision.ClickIcon                        pin
+        ${result}=                   Is Icon                      pin
+    END         
+    
+    Log                        All extensions have been enabled
 
 
