@@ -40,6 +40,6 @@ Install Extension from Chrome Web Store
     Close Window
 
 Pin Extension to the Menu
-    Click Icon    ${CURDIR}${/}puzzlegrey.png
+    QVision.Click Icon    puzzlegrey
 
 
