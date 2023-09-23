@@ -42,6 +42,7 @@ Install Extension from Chrome Web Store
     QVision.Click Text        Add extension
     Close Window
     GoTo              chrome://version
+    ClickText         OS
 
 Pin Extension to the Menu
     QVision.Click Icon    puzzlegrey
@@ -51,6 +52,7 @@ Pin Extension to the Menu
     ${x2}=                Evaluate         ${x1} + 300               
     ${y2}=                Evaluate         ${y1} + 60 
     QVision.SetConfig                 region                        ${x1}    ${y1}    ${x2}    ${y2}
+    Hover Icon                        pin
     ClickIcon                        pin
 
 
