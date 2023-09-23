@@ -6,6 +6,8 @@ Library                QVision
 Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector
 Suite Teardown        CloseAllBrowsers
 
+*** Variables ***
+${BASE_IMAGE_PATH}          ${CURDIR}
 
 *** Test Cases ***
 
@@ -40,6 +42,7 @@ Install Extension from Chrome Web Store
     Close Window
 
 Pin Extension to the Menu
-    QVision.Click Icon    puzzlegrey
+    
+    QVision.Click Icon    puzzleblack
 
 
