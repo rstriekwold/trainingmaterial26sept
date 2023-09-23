@@ -40,6 +40,7 @@ Install Extension from Chrome Web Store
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
     Close Window
+    GoTo              chrome://extensions
 
 Pin Extension to the Menu
     
