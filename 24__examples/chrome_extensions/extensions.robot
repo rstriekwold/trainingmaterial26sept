@@ -19,6 +19,7 @@ Get Profile Directory
     Set Library Search Order          QForce      QVision
     GoTo              chrome://extensions
     QVision.ClickText         Open Chrome Web Store
+    SwitchWindow              NEW
     TypeText                  Search the store    SelectorsHub
 
     # Example: /tmp/.org.chromium.Chromium.W1fn10/Default
