@@ -37,5 +37,7 @@ Install Extension from Chrome Web Store
     Run Keyword If              '${unique_anchor}'!='${EMPTY}'    Click Text                ${result_title}        anchor=${unique_anchor}    
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
-    SwitchWindow      1
+    Close Window
+    QVision.ClickText         Extensions
+
 
