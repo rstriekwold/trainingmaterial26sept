@@ -40,10 +40,10 @@ Install Extension from Chrome Web Store
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
     Close Window
-    GoTo              chrome://extensions
+    GoTo              chrome://version
 
 Pin Extension to the Menu
     
-    QVision.Click Icon    puzzleblack
+    QVision.Click Icon    puzzlegrey
 
 
