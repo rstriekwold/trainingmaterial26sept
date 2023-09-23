@@ -38,6 +38,8 @@ Install Extension from Chrome Web Store
     Click Text                Add to Chrome
     QVision.Click Text        Add extension
     Close Window
-    QVision.ClickText         Extensions
+
+Pin Extension to the Menu
+    Click Icon    ${CURDIR}${/}puzzlegrey.png
 
 
