@@ -50,7 +50,7 @@ Pin All Extensions to the Menu
     ${result}=                   Is Icon                      pin
     Log to Console               ${result}          
 
-    WHILE    ${result}
+    WHILE    '${result}'=='True'
         QVision.Click Icon    puzzlegrey
         QVision.ClickIcon                        pin
         QVision.Click Icon    puzzlegrey
