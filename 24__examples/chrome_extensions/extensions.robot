@@ -3,9 +3,7 @@ Library                QForce
 Library               OperatingSystem
 Library               Process
 Library                QVision
-Suite Setup           Run Keywords    Open Browser    about:blank       chrome    Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector
-# Suite Setup           Run Keywords    Get Profile Directory    Open Browser with Extensions
-# Suite Setup     OpenBrowser     http://howbigismybrowser.com/   chrome   --load-extension=<path-to-extension-folder>,--user-data-dir\=C:\\temp,--profile-directory\=Test2
+Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector
 Suite Teardown        CloseAllBrowsers
 
 
@@ -15,6 +13,9 @@ Examples - Browser with extensions enabled
     Go To    https://www.copado.com
 
 *** Keywords ***
+
+Start Browser 
+    Open Browser    about:blank       chrome
 
 Install Chrome Extension SelectorsHub
     [Documentation]    xPath plugin to auto generate, write and verify xpath & cssSelector.
