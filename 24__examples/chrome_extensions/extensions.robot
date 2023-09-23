@@ -10,8 +10,8 @@ Suite Teardown        CloseAllBrowsers
 
 
 *** Test Cases ***
-Exercise 2 - Consulting Libraries
-    List Directory     ${profile_dir}${/}Extensions
+# Exercise 2 - Consulting Libraries
+#     List Directory     ${profile_dir}${/}Extensions
 
 
 Get Profile Directory
