@@ -45,8 +45,12 @@ Install Extension from Chrome Web Store
 
 Pin Extension to the Menu
     QVision.Click Icon    puzzlegrey
-    @{list}=                Hover Text            Salesforce inspector
-    ${x}=                   Get 
-    SetConfig               region                     ${None}
+    @{region_tuples}=                       QVision.Hover Text      text=Salesforce inspector
+    ${x1}=	Get From List	${region_tuples}	0
+    ${y1}=   Get From List	${region_tuples}	1
+    ${x2}=                Evaluate         ${x1} + 300               
+    ${y2}=                Evaluate         ${y1} + 60 
+    QVision.SetConfig                 region                        ${x1}    ${y1}    ${x2}    ${y2}
+    ClickIcon                        pin
 
 
