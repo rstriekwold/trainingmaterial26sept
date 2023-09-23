@@ -3,6 +3,7 @@ Library                QForce
 Library               OperatingSystem
 Library               Process
 Library                QVision
+Library            Collections
 Suite Setup           Run Keywords   Start Browser     Install Chrome Extension SelectorsHub        Install Chrome Extension Salesforce inspector
 Suite Teardown        CloseAllBrowsers
 
@@ -43,7 +44,9 @@ Install Extension from Chrome Web Store
     GoTo              chrome://version
 
 Pin Extension to the Menu
-    
     QVision.Click Icon    puzzlegrey
+    @{list}=                Hover Text            Salesforce inspector
+    ${x}=                   Get 
+    SetConfig               region                     ${None}
 
 
