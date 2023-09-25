@@ -58,5 +58,3 @@ Pin All Extensions to the Menu
     END         
     
     Log                        All extensions have been enabled
-
-
