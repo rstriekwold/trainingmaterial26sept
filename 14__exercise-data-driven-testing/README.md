@@ -50,4 +50,6 @@ Let's start with a clearly descriptive data driven tests using Test Data interna
 
 1. In folder **14__exercise-data-driven-testing**, create file datadriver-suite-test-template.robot and copy the contents from here [datadriver-suite-test-template.robot](datadriver-suite-test-template.robot)
 
+2. Open file **datadriver-suite-test-template.robot** and run the test cases in outside of live testing
+
 # Two options you can use for Individual Test Debugging
