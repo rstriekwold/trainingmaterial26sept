@@ -27,9 +27,13 @@ Let's start with a clearly descriptive data driven tests using Test Data interna
 
 2. Create a folder in the root named **14__exercise-data-driven-testing**
 
-3. In folder **14__exercise-data-driven-testing**, create file custom-keywords.robot and copy the contents from here [custom-keywords.robot](custom-keywords.robot)
+3. In folder **14__exercise-data-driven-testing**, create file suite-test-template.robot and copy the contents from here [suite-test-template.robot](suite-test-template.robot)
 
-4. View and review **Test Case Exercise 12 - Custom Keywords - Step 1 Grouping and it's Custom Keywords** written in the keywords table below the test cases.
+4. Create a folder in root named **resources**
+
+5. In this foler, create file common.robot and copy the contents from here [common.robot](../resources/common.robot)
+
+5. In this foler, create file leads.robot and copy the contents from here [leads.robot](../resources/leads.robot)
 
 5. Run the test cases in live testing
 
