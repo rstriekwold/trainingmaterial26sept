@@ -14,10 +14,19 @@ The purpose of this exercise is to learn how data driven testing can be applied,
 
 # Learning Objectives
 
+- Identify a candidate for Data Driven Testing
 - Create your Data Driven Test using Test Template
 - Prepare your CSV File with Test Data
 - Create your Data Driven Test using DataDriver 3rd party library
 - Two options you can use for Individual Test Debugging
+
+# Identify a candidate for Data Driven Testing
+
+1. Create a new empty suite **exercise 14 data driven testing**
+
+2. Create a folder in the root named **14__exercise-data-driven-testing**
+
+3. In folder **14__exercise-data-driven-testing**, create file suitable-candidate-for-data-driven-testing.robot and copy the contents from here [suitable-candidate-for-data-driven-testing.robot](suitable-candidate-for-data-driven-testing.robot)
 
 # Create your Data Driven Test using Test Template
 
