@@ -46,6 +46,7 @@ Welcome to our Bitbucket repo. Here you can find and read all the exercises used
 9.  [Image Comparions with QImage](24__examples/image-comparison)
 10.  [PDF Testing](24__examples/pdf)
 11. [Operating System](24__examples/operating-system)
+12. [Chrome Extension](24__examples/chrome-extensions)
 
 ## Technologies
 
